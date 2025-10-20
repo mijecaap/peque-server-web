@@ -6,6 +6,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gamepad2, Users, Calendar, Zap } from "lucide-react"
 import { useServers } from "@/lib/hooks/useServers"
+import {
+  fadeIn,
+  slideUp,
+  staggerContainer,
+  staggerItem,
+  scaleIn,
+  viewport,
+  scrollRevealContainer,
+} from "@/lib/animations"
 
 export default function Home() {
   // Fetch real server data
@@ -15,22 +24,6 @@ export default function Home() {
   const totalPlayers = servers?.reduce((acc, server) => acc + server.players.count, 0) || 0
   const totalServers = servers?.length || 0
   const maxPlayers = servers?.reduce((acc, server) => acc + server.players.max, 0) || 0
-
-  // Animation variants
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
 
   const features = [
     {
@@ -70,7 +63,7 @@ export default function Home() {
             variants={staggerContainer}
             className="flex flex-col items-center text-center space-y-8"
           >
-            <motion.div variants={fadeIn} className="space-y-4">
+            <motion.div variants={slideUp} className="space-y-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                 Bienvenido a{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -83,7 +76,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
+            <motion.div variants={scaleIn} className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="text-lg px-8">
                 <Link href="/servers">Ver Servidores</Link>
               </Button>
@@ -128,7 +121,7 @@ export default function Home() {
               {features.map((feature, index) => {
                 const Icon = feature.icon
                 return (
-                  <motion.div key={index} variants={fadeIn}>
+                  <motion.div key={index} variants={staggerItem}>
                     <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
                       <CardHeader>
                         <div className="mb-4 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -156,11 +149,11 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
+            viewport={viewport}
+            variants={scrollRevealContainer}
             className="space-y-12"
           >
-            <motion.div variants={fadeIn} className="text-center space-y-4">
+            <motion.div variants={slideUp} className="text-center space-y-4">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                 Nuestra Comunidad
               </h2>
@@ -173,7 +166,7 @@ export default function Home() {
               variants={staggerContainer}
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
             >
-              <motion.div variants={fadeIn}>
+              <motion.div variants={scaleIn}>
                 <Card className="text-center">
                   <CardHeader>
                     <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -194,7 +187,7 @@ export default function Home() {
                 </Card>
               </motion.div>
 
-              <motion.div variants={fadeIn}>
+              <motion.div variants={scaleIn}>
                 <Card className="text-center">
                   <CardHeader>
                     <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -215,7 +208,7 @@ export default function Home() {
                 </Card>
               </motion.div>
 
-              <motion.div variants={fadeIn}>
+              <motion.div variants={scaleIn}>
                 <Card className="text-center">
                   <CardHeader>
                     <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -238,8 +231,8 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
+            viewport={viewport}
+            variants={slideUp}
             className="max-w-4xl mx-auto"
           >
             <Card className="border-primary/50 bg-gradient-to-br from-primary/5 to-accent/5">

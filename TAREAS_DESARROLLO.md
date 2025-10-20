@@ -427,31 +427,31 @@
 - [x] Añadir botón de refrescar manual
 - [x] Mostrar timestamp de última actualización
 
-### Tarea 3.5: Implementar polling automático
-- [ ] En `lib/hooks/useServers.ts`, configurar SWR options:
+### Tarea 3.5: Implementar polling automático ✅
+- [x] En `lib/hooks/useServers.ts`, configurar SWR options:
   - `refreshInterval: 30000` (30 segundos)
   - `revalidateOnFocus: true`
   - `revalidateOnReconnect: true`
-- [ ] Añadir indicador visual de "Actualizando..." cuando se revalida
-- [ ] Probar que los datos se actualizan automáticamente
+- [x] Añadir indicador visual de "Actualizando..." cuando se revalida
+- [x] Probar que los datos se actualizan automáticamente
 
-### Tarea 3.6: Añadir animaciones globales con Framer Motion
-- [ ] Crear archivo `lib/animations.ts`
-- [ ] Definir variantes de animación reutilizables:
+### Tarea 3.6: Añadir animaciones globales con Framer Motion ✅
+- [x] Crear archivo `lib/animations.ts`
+- [x] Definir variantes de animación reutilizables:
   - `fadeIn`: fade in desde opacidad 0
   - `slideUp`: slide desde abajo
   - `staggerContainer`: para animar hijos secuencialmente
   - `scaleIn`: scale desde 0.8
-- [ ] Exportar todas las variantes
-- [ ] Aplicar en componentes principales
+- [x] Exportar todas las variantes
+- [x] Aplicar en componentes principales
 
-### Tarea 3.7: Implementar animaciones en Landing Page
-- [ ] Importar motion de framer-motion en `page.tsx`
-- [ ] Envolver secciones en motion.div
-- [ ] Aplicar variante `fadeIn` al hero
-- [ ] Aplicar `staggerContainer` a la grid de características
-- [ ] Añadir animación de scroll reveal con viewport detection
-- [ ] Probar que las animaciones funcionan suavemente
+### Tarea 3.7: Implementar animaciones en Landing Page ✅
+- [x] Importar motion de framer-motion en `page.tsx`
+- [x] Envolver secciones en motion.div
+- [x] Aplicar variante `fadeIn` al hero
+- [x] Aplicar `staggerContainer` a la grid de características
+- [x] Añadir animación de scroll reveal con viewport detection
+- [x] Probar que las animaciones funcionan suavemente
 
 ### Tarea 3.8: Configurar SEO básico con next-seo
 - [ ] Crear archivo `lib/seo-config.ts`
