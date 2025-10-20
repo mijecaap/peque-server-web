@@ -406,14 +406,14 @@
 - [x] Añadir icono (círculo pulsante si está online)
 - [x] Exportar componente
 
-### Tarea 3.3: Crear componente PlayerCount
-- [ ] Crear archivo `components/PlayerCount.tsx`
-- [ ] Aceptar props: `current: number, max: number, players?: string[]`
-- [ ] Mostrar barra de progreso visual
-- [ ] Mostrar números current/max
-- [ ] Si hay lista de jugadores, mostrar tooltip con nombres
-- [ ] Usar iconos de Lucide (Users icon)
-- [ ] Aplicar estilos atractivos
+### Tarea 3.3: Crear componente PlayerCount ✅
+- [x] Crear archivo `components/PlayerCount.tsx`
+- [x] Aceptar props: `current: number, max: number, players?: string[]`
+- [x] Mostrar barra de progreso visual
+- [x] Mostrar números current/max
+- [x] Si hay lista de jugadores, mostrar tooltip con nombres
+- [x] Usar iconos de Lucide (Users icon)
+- [x] Aplicar estilos atractivos
 
 ### Tarea 3.4: Crear página de Dashboard de Servidores
 - [ ] Crear archivo `app/(marketing)/servers/page.tsx`
