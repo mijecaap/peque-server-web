@@ -66,9 +66,9 @@
 - [x] Ejemplo: `glow`, `pulse-slow`, `fade-in`
 - [x] Probar la configuración creando un componente de prueba
 
-### Tarea 1.2: Crear tipos TypeScript para Exaroton API
-- [ ] Crear archivo `types/exaroton.ts`
-- [ ] Definir interface `ExarotonServer` con propiedades:
+### Tarea 1.2: Crear tipos TypeScript para Exaroton API ✅
+- [x] Crear archivo `types/exaroton.ts`
+- [x] Definir interface `ExarotonServer` con propiedades:
   - `id: string`
   - `name: string`
   - `status: 'online' | 'offline' | 'starting' | 'stopping'`
@@ -78,8 +78,8 @@
   - `players: { count: number; max: number; list: string[] }`
   - `software: { id: string; name: string; version: string }`
   - `ram: number`
-- [ ] Definir interface `ExarotonAPIResponse<T>` para respuestas genéricas
-- [ ] Exportar todos los tipos
+- [x] Definir interface `ExarotonAPIResponse<T>` para respuestas genéricas
+- [x] Exportar todos los tipos
 
 ### Tarea 1.3: Crear cliente API de Exaroton
 - [ ] Crear archivo `lib/exaroton.ts`
