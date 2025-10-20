@@ -20,14 +20,15 @@
 - [x] Crear archivo `.gitignore` si no existe
 - [x] Inicializar repositorio Git con `git init`
 
-### Tarea 0.2: Instalar dependencias principales
-- [ ] Instalar Framer Motion: `npm install framer-motion`
-- [ ] Instalar SWR para data fetching: `npm install swr`
-- [ ] Instalar Axios para HTTP requests: `npm install axios`
-- [ ] Instalar Lucide React para iconos: `npm install lucide-react`
-- [ ] Instalar next-seo para SEO: `npm install next-seo`
-- [ ] Instalar Sanity client: `npm install @sanity/client @sanity/image-url`
-- [ ] Verificar que todas las dependencias se instalaron en `package.json`
+### Tarea 0.2: Instalar dependencias principales ✅
+- [x] Instalar Framer Motion: `npm install framer-motion`
+- [x] Instalar SWR para data fetching: `npm install swr`
+- [x] Instalar Axios para HTTP requests: `npm install axios`
+- [x] Instalar Lucide React para iconos: `npm install lucide-react`
+- [x] Instalar next-seo para SEO: `npm install next-seo`
+- [x] Instalar Sanity client: `npm install @sanity/client @sanity/image-url`
+- [x] Instalar next-sanity (best practice para Next.js): `npm install next-sanity`
+- [x] Verificar que todas las dependencias se instalaron en `package.json`
 
 ### Tarea 0.3: Configurar shadcn/ui
 - [ ] Inicializar shadcn/ui con `npx shadcn-ui@latest init`
