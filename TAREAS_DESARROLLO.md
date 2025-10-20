@@ -228,19 +228,19 @@
 - [x] Configurar preview con title y media
 - [x] Exportar el schema
 
-### Tarea 2.4: Crear schema de Galería en Sanity
-- [ ] Crear archivo `sanity/schemas/gallery.ts`
-- [ ] Definir schema con campos:
+### Tarea 2.4: Crear schema de Galería en Sanity ✅
+- [x] Crear archivo `sanity/schemas/gallery.ts`
+- [x] Definir schema con campos:
   - `name: 'gallery'`
   - `title: 'Galería'`
   - `type: 'document'`
-- [ ] Añadir fields:
+- [x] Añadir fields:
   - `title` (string, required)
   - `description` (text)
   - `images` (array de image objects)
   - `category` (string, opcional)
   - `createdAt` (datetime)
-- [ ] Exportar el schema
+- [x] Exportar el schema
 
 ### Tarea 2.5: Registrar schemas en Sanity
 - [ ] Abrir archivo `sanity/sanity.config.ts`
