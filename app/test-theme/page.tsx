@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { MinecraftMOTD } from "@/components/MinecraftMOTD"
 
 export default function TestThemePage() {
   return (
@@ -66,6 +67,32 @@ export default function TestThemePage() {
           <Badge variant="outline">Outline</Badge>
           <Badge variant="destructive">Destructive</Badge>
           <Badge className="bg-primary">Online</Badge>
+        </CardContent>
+      </Card>
+
+      {/* Minecraft MOTD Parser */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Minecraft MOTD Parser</CardTitle>
+          <CardDescription>Formateo de mensajes MOTD con códigos de color de Minecraft</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div>
+            <p className="text-sm font-medium mb-2">Ejemplo 1: Colores básicos</p>
+            <MinecraftMOTD motd="§aVerde §bAzul §cRojo §eAmarillo §fBlanco" />
+          </div>
+          <div>
+            <p className="text-sm font-medium mb-2">Ejemplo 2: Con formato (negrita, cursiva)</p>
+            <MinecraftMOTD motd="§a§lNegrita §r§oItalica §r§nSubrayado §r§mTachado" />
+          </div>
+          <div>
+            <p className="text-sm font-medium mb-2">Ejemplo 3: MOTD de servidor real</p>
+            <MinecraftMOTD motd="§aHypixel Network §7§c1.8/1.9/1.10/1.11/1.12 §e§lNEW PTL GAME:§b§l THE BRIDGE" />
+          </div>
+          <div>
+            <p className="text-sm font-medium mb-2">Ejemplo 4: Múltiples líneas</p>
+            <MinecraftMOTD motd="§6§lServidor Minecraft\n§7Survival • Creativo • Minijuegos" />
+          </div>
         </CardContent>
       </Card>
 

@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { MinecraftMOTD } from '@/components/MinecraftMOTD'
 
 interface ServerCardProps {
   server: ExarotonServer
@@ -110,9 +111,10 @@ export function ServerCard({ server, className }: ServerCardProps) {
 
           {/* MOTD */}
           {server.motd && (
-            <p className="text-sm text-muted-foreground line-clamp-2 mt-2">
-              {server.motd}
-            </p>
+            <MinecraftMOTD 
+              motd={server.motd}
+              className="mt-2 line-clamp-2"
+            />
           )}
         </CardHeader>
 

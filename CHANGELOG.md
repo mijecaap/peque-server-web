@@ -135,6 +135,43 @@ Primera versión estable del sitio web del servidor de Minecraft con integració
 
 ---
 
+## [1.1.0] - 2025-10-20
+
+### ✨ Agregado
+
+#### Formateo de MOTD de Minecraft
+- **Integración de `@sfirew/minecraft-motd-parser`**: Librería para parsear y renderizar códigos de formato de Minecraft
+- **Componente `MinecraftMOTD`**:
+  - Convierte códigos de color de Minecraft (§a, §b, §c, etc.) a HTML estilizado
+  - Soporta todos los formatos: negrita (§l), cursiva (§o), subrayado (§n), tachado (§m)
+  - Soporta códigos hex de Minecraft 1.16+
+  - Estilo de consola auténtico de Minecraft:
+    - Fondo negro (#000000) como en el juego
+    - Fuente monoespaciada (font-mono)
+    - Text shadow para efecto de profundidad
+    - Colores fieles a los originales de Minecraft
+  - Manejo de errores con fallback que limpia códigos si falla el parser
+  - Optimizado con `useMemo` para evitar re-renders innecesarios
+
+#### Mejoras en ServerCard
+- El MOTD ahora se muestra con colores y formatos de Minecraft
+- Experiencia visual más auténtica y fiel al juego
+- Mejor legibilidad del mensaje del servidor
+
+#### Ejemplos y Testing
+- Página de test (`/test-theme`) actualizada con ejemplos de MOTD:
+  - Colores básicos
+  - Formatos (negrita, cursiva, subrayado, tachado)
+  - MOTD de servidores reales (estilo Hypixel)
+  - Soporte para múltiples líneas
+
+### 📦 Dependencias
+
+#### Agregadas
+- `@sfirew/minecraft-motd-parser@1.1.6` - Parser de MOTD de Minecraft con soporte completo de códigos de color y formato
+
+---
+
 ## [Unreleased]
 
 ## Notas de Versión
@@ -155,4 +192,5 @@ Este proyecto sigue [SemVer](https://semver.org/):
 
 ---
 
+**[1.1.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.1.0
 **[1.0.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.0.0
