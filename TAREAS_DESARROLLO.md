@@ -415,17 +415,17 @@
 - [x] Usar iconos de Lucide (Users icon)
 - [x] Aplicar estilos atractivos
 
-### Tarea 3.4: Crear página de Dashboard de Servidores
-- [ ] Crear archivo `app/(marketing)/servers/page.tsx`
-- [ ] Usar hook `useServers()` para obtener datos
-- [ ] Implementar grid responsive de ServerCards
-- [ ] Añadir filtros:
+### Tarea 3.4: Crear página de Dashboard de Servidores ✅
+- [x] Crear archivo `app/(marketing)/servers/page.tsx`
+- [x] Usar hook `useServers()` para obtener datos
+- [x] Implementar grid responsive de ServerCards
+- [x] Añadir filtros:
   - Todos / Online / Offline
   - Búsqueda por nombre
-- [ ] Implementar estado de carga con skeletons
-- [ ] Manejar errores con mensaje amigable
-- [ ] Añadir botón de refrescar manual
-- [ ] Mostrar timestamp de última actualización
+- [x] Implementar estado de carga con skeletons
+- [x] Manejar errores con mensaje amigable
+- [x] Añadir botón de refrescar manual
+- [x] Mostrar timestamp de última actualización
 
 ### Tarea 3.5: Implementar polling automático
 - [ ] En `lib/hooks/useServers.ts`, configurar SWR options:
