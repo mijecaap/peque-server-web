@@ -5,6 +5,58 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.6.0] - 2025-10-20
+
+### ✨ Agregado
+
+#### Sistema de Theme Toggle (Modo Claro/Oscuro)
+- **ThemeProvider**: Componente de contexto para gestionar el tema global
+  - Soporte para 3 modos: Claro, Oscuro, Sistema
+  - Persistencia en localStorage con key `peque-server-theme`
+  - Detección automática de preferencia del sistema
+  - Theme por defecto: Oscuro
+  - Hook personalizado `useTheme()` para acceder al contexto
+  
+- **ThemeToggle**: Componente de toggle en el Header
+  - Dropdown menu con 3 opciones: Claro, Oscuro, Sistema
+  - Iconos animados: Sol (claro) y Luna (oscuro)
+  - Transiciones suaves entre temas
+  - Visible en desktop y mobile
+  - Ubicación estratégica: al lado del botón de Discord
+
+#### Componentes UI Nuevos
+- **DropdownMenu**: Instalado de shadcn/ui para el theme toggle
+  - `components/ui/dropdown-menu.tsx`
+  - Basado en Radix UI con estilos personalizados
+
+#### Integración en Layout
+- **RootLayout actualizado**: 
+  - ThemeProvider envuelve toda la aplicación
+  - Atributo `suppressHydrationWarning` en `<html>` para evitar warnings
+  - Configuración inicial: tema oscuro por defecto
+
+#### Header Mejorado
+- **Desktop**: ThemeToggle entre navegación y botón Discord
+- **Mobile**: ThemeToggle al lado del botón de menú hamburguesa
+- **UX mejorada**: Acceso rápido al cambio de tema desde cualquier página
+
+### 🎨 Mejoras de UI/UX
+- **Transiciones suaves**: Animaciones al cambiar entre temas
+- **Iconografía clara**: Sol y Luna con rotación animada
+- **Accesibilidad**: Label screen-reader "Cambiar tema"
+- **Responsive**: Funciona perfectamente en móvil y desktop
+
+### 🔧 Técnico
+- **CSS Variables**: Sistema de temas ya existente aprovechado
+- **Dark mode CSS**: `.dark` class toggle en `<html>`
+- **Sistema operativo**: Respeta preferencia de modo oscuro del OS
+- **Sin flash**: Prevención de FOUC (Flash of Unstyled Content)
+
+### 📦 Dependencias
+- `@radix-ui/react-dropdown-menu`: Dropdown accesible para theme toggle
+
+---
+
 ## [1.5.1] - 2025-10-20
 
 ### 🐛 Corregido
@@ -476,6 +528,7 @@ Este proyecto sigue [SemVer](https://semver.org/):
 
 ---
 
+**[1.6.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.6.0
 **[1.5.1]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.5.1
 **[1.5.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.5.0
 **[1.4.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.4.0
