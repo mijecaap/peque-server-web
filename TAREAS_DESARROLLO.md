@@ -304,43 +304,43 @@
 - [x] Crear query para la galería
 - [x] Exportar todas las queries
 
-### Tarea 2.10: Crear página de lista de Noticias
-- [ ] Crear archivo `app/(marketing)/news/page.tsx`
-- [ ] Implementar función para fetch de noticias desde Sanity
-- [ ] Usar ISR con `revalidate: 60` (revalidar cada 60 segundos)
-- [ ] Renderizar grid de cards de noticias
-- [ ] Cada card debe mostrar:
+### Tarea 2.10: Crear página de lista de Noticias ✅
+- [x] Crear archivo `app/(marketing)/news/page.tsx`
+- [x] Implementar función para fetch de noticias desde Sanity
+- [x] Usar ISR con `revalidate: 60` (revalidar cada 60 segundos)
+- [x] Renderizar grid de cards de noticias
+- [x] Cada card debe mostrar:
   - Imagen principal
   - Título
   - Categoría (Badge de shadcn)
   - Fecha de publicación
   - Excerpt
   - Link a la noticia completa
-- [ ] Aplicar layout responsive (1 columna móvil, 2-3 en desktop)
-- [ ] Añadir animaciones de entrada
+- [x] Aplicar layout responsive (1 columna móvil, 2-3 en desktop)
+- [x] Añadir animaciones de entrada
 
-### Tarea 2.11: Crear componente NewsCard
-- [ ] Crear archivo `components/NewsCard.tsx`
-- [ ] Aceptar props: `article: NewsArticle`
-- [ ] Usar Card de shadcn/ui
-- [ ] Incluir imagen con next/image optimizada
-- [ ] Formatear fecha con `Intl.DateTimeFormat`
-- [ ] Añadir hover effects
-- [ ] Hacer el card clickeable con Link de Next
-- [ ] Exportar componente
+### Tarea 2.11: Crear componente NewsCard ✅
+- [x] Crear archivo `components/NewsCard.tsx`
+- [x] Aceptar props: `article: NewsArticle`
+- [x] Usar Card de shadcn/ui
+- [x] Incluir imagen con next/image optimizada
+- [x] Formatear fecha con `Intl.DateTimeFormat`
+- [x] Añadir hover effects
+- [x] Hacer el card clickeable con Link de Next
+- [x] Exportar componente
 
-### Tarea 2.12: Crear página individual de Noticia
-- [ ] Crear archivo `app/(marketing)/news/[slug]/page.tsx`
-- [ ] Implementar `generateStaticParams()` para SSG de todas las noticias
-- [ ] Implementar función de fetch por slug
-- [ ] Renderizar:
+### Tarea 2.12: Crear página individual de Noticia ✅
+- [x] Crear archivo `app/(marketing)/news/[slug]/page.tsx`
+- [x] Implementar `generateStaticParams()` para SSG de todas las noticias
+- [x] Implementar función de fetch por slug
+- [x] Renderizar:
   - Título grande
   - Metadata (autor, fecha, categoría)
   - Imagen principal full width
   - Contenido del body (usar @portabletext/react si es necesario)
   - Botón "Volver a noticias"
-- [ ] Aplicar estilos de artículo (typography mejorada)
-- [ ] Configurar metadata dinámica para SEO
+- [x] Aplicar estilos de artículo (typography mejorada)
+- [x] Configurar metadata dinámica para SEO
 
 ### Tarea 2.13: Crear página de Galería
 - [ ] Crear archivo `app/(marketing)/gallery/page.tsx`
