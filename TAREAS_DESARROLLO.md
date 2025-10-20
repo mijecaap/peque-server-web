@@ -81,19 +81,19 @@
 - [x] Definir interface `ExarotonAPIResponse<T>` para respuestas genéricas
 - [x] Exportar todos los tipos
 
-### Tarea 1.3: Crear cliente API de Exaroton
-- [ ] Crear archivo `lib/exaroton.ts`
-- [ ] Importar axios y los tipos creados
-- [ ] Crear constante `EXAROTON_API_URL = 'https://api.exaroton.com/v1'`
-- [ ] Crear instancia de axios con configuración base:
+### Tarea 1.3: Crear cliente API de Exaroton ✅
+- [x] Crear archivo `lib/exaroton.ts`
+- [x] Importar axios y los tipos creados
+- [x] Crear constante `EXAROTON_API_URL = 'https://api.exaroton.com/v1'`
+- [x] Crear instancia de axios con configuración base:
   - Base URL
   - Headers con Authorization usando `process.env.EXAROTON_API_KEY`
   - Timeout de 10000ms
-- [ ] Crear función `getServers()` que retorne Promise<ExarotonServer[]>
-- [ ] Crear función `getServer(id: string)` que retorne Promise<ExarotonServer>
-- [ ] Crear función `getServerLogs(id: string)` que retorne Promise<string[]>
-- [ ] Añadir manejo de errores con try-catch en cada función
-- [ ] Exportar todas las funciones
+- [x] Crear función `getServers()` que retorne Promise<ExarotonServer[]>
+- [x] Crear función `getServer(id: string)` que retorne Promise<ExarotonServer>
+- [x] Crear función `getServerLogs(id: string)` que retorne Promise<string[]>
+- [x] Añadir manejo de errores con try-catch en cada función
+- [x] Exportar todas las funciones
 
 ### Tarea 1.4: Crear API Routes en Next.js (Proxy)
 - [ ] Crear archivo `app/api/exaroton/servers/route.ts`
