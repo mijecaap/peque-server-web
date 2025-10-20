@@ -5,6 +5,28 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.5.1] - 2025-10-20
+
+### 🐛 Corregido
+
+#### ESLint Errors en Build de Producción
+- **Fix crítico**: Escapado de comillas en página `como-entrar`
+- **Archivos corregidos**: `app/(marketing)/como-entrar/page.tsx`
+- **Líneas afectadas**:
+  - Línea 462: Escapado "Multijugador" y "Añadir servidor"
+  - Líneas 483-486: Escapado "Dirección del servidor", "PequeServer Premium", "Listo"
+  - Línea 502: Escapado "Conectarse"
+- **Error resuelto**: `react/no-unescaped-entities`
+- **Impacto**: Build de producción ahora compila exitosamente
+
+### 📦 Build Status
+- ✅ Compilación exitosa
+- ✅ Linting pasado
+- ✅ Validación de tipos correcta
+- ✅ 12 páginas generadas estáticamente
+
+---
+
 ## [1.5.0] - 2025-10-20
 
 ### 🎨 Rediseño Mayor
@@ -454,6 +476,7 @@ Este proyecto sigue [SemVer](https://semver.org/):
 
 ---
 
+**[1.5.1]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.5.1
 **[1.5.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.5.0
 **[1.4.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.4.0
 **[1.3.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.3.0

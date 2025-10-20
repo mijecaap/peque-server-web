@@ -458,8 +458,8 @@ export default function ComoEntrarPage() {
                         <CardDescription className="text-base">
                           <ol className="list-decimal list-inside space-y-2 mt-2">
                             <li>Inicia Minecraft en tu PC</li>
-                            <li>Selecciona "Multijugador" en el menú principal</li>
-                            <li>Haz clic en "Añadir servidor"</li>
+                            <li>Selecciona &quot;Multijugador&quot; en el menú principal</li>
+                            <li>Haz clic en &quot;Añadir servidor&quot;</li>
                           </ol>
                         </CardDescription>
                       </div>
@@ -480,10 +480,10 @@ export default function ComoEntrarPage() {
                         <CardDescription className="text-base space-y-2">
                           <p>
                             Ingresa la IP correspondiente (Premium o Gratuita) en el campo
-                            "Dirección del servidor"
+                            &quot;Dirección del servidor&quot;
                           </p>
-                          <p>Dale un nombre al servidor (ej: "PequeServer Premium")</p>
-                          <p>Haz clic en "Listo"</p>
+                          <p>Dale un nombre al servidor (ej: &quot;PequeServer Premium&quot;)</p>
+                          <p>Haz clic en &quot;Listo&quot;</p>
                         </CardDescription>
                       </div>
                     </div>
@@ -499,7 +499,7 @@ export default function ComoEntrarPage() {
                       <div className="flex-1">
                         <CardTitle className="mb-2">4. ¡Conéctate y juega!</CardTitle>
                         <CardDescription className="text-base">
-                          Selecciona el servidor de la lista y haz clic en "Conectarse".
+                          Selecciona el servidor de la lista y haz clic en &quot;Conectarse&quot;.
                           ¡Bienvenido a PequeServer!
                         </CardDescription>
                       </div>
