@@ -37,7 +37,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border/40 bg-background">
-      <div className="container py-12 md:py-16">
+      <div className="container mx-auto py-12 md:py-16 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Información del Servidor */}
           <div className="space-y-4">

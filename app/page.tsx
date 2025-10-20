@@ -1,103 +1,253 @@
-import Image from "next/image";
+"use client"
+
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Gamepad2, Users, Calendar, Zap } from "lucide-react"
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const features = [
+    {
+      icon: Gamepad2,
+      title: "Mods Únicos",
+      description: "Experimenta con mods exclusivos cuidadosamente seleccionados para mejorar tu gameplay.",
+    },
+    {
+      icon: Users,
+      title: "Comunidad Activa",
+      description: "Únete a una comunidad vibrante de jugadores apasionados por Minecraft.",
+    },
+    {
+      icon: Calendar,
+      title: "Eventos Semanales",
+      description: "Participa en eventos especiales, torneos y desafíos con premios increíbles.",
+    },
+    {
+      icon: Zap,
+      title: "Alto Rendimiento",
+      description: "Servidores optimizados con hardware de última generación para una experiencia sin lag.",
+    },
+  ]
+
+  return (
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
+        
+        {/* Content */}
+        <div className="container relative z-10 mx-auto px-4 py-20 md:py-32">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="flex flex-col items-center text-center space-y-8"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <motion.div variants={fadeIn} className="space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+                Bienvenido a{" "}
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  PequeServer
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+                La mejor experiencia de Minecraft con mods únicos, comunidad activa y
+                eventos semanales
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="text-lg px-8">
+                <Link href="/servers">Ver Servidores</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-lg px-8">
+                <a
+                  href="https://discord.gg/tu-servidor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Unirse a Discord
+                </a>
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="space-y-12"
+          >
+            <motion.div variants={fadeIn} className="text-center space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+                ¿Por qué elegirnos?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Ofrecemos una experiencia única que combina lo mejor del Minecraft
+                clásico con innovaciones modernas
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            >
+              {features.map((feature, index) => {
+                const Icon = feature.icon
+                return (
+                  <motion.div key={index} variants={fadeIn}>
+                    <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                      <CardHeader>
+                        <div className="mb-4 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-primary" />
+                        </div>
+                        <CardTitle>{feature.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-base">
+                          {feature.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                )
+              })}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 md:py-32 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="space-y-12"
+          >
+            <motion.div variants={fadeIn} className="text-center space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+                Nuestra Comunidad
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Formamos parte de una comunidad en constante crecimiento
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
+              <motion.div variants={fadeIn}>
+                <Card className="text-center">
+                  <CardHeader>
+                    <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      500+
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-lg text-muted-foreground">
+                      Jugadores Activos
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div variants={fadeIn}>
+                <Card className="text-center">
+                  <CardHeader>
+                    <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      3
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-lg text-muted-foreground">
+                      Servidores Disponibles
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div variants={fadeIn}>
+                <Card className="text-center">
+                  <CardHeader>
+                    <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      2+
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-lg text-muted-foreground">Años Online</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="max-w-4xl mx-auto"
+          >
+            <Card className="border-primary/50 bg-gradient-to-br from-primary/5 to-accent/5">
+              <CardHeader className="text-center space-y-4 pb-6">
+                <CardTitle className="text-3xl sm:text-4xl md:text-5xl font-bold">
+                  ¿Listo para la aventura?
+                </CardTitle>
+                <CardDescription className="text-lg">
+                  Únete ahora y comienza a jugar con nosotros. Es gratis y fácil de empezar.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col sm:flex-row gap-4 justify-center pb-8">
+                <Button asChild size="lg" className="text-lg px-8">
+                  <Link href="/servers">Explorar Servidores</Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8"
+                >
+                  <Link href="/news">Ver Noticias</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
+

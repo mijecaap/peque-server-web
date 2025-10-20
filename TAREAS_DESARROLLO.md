@@ -147,23 +147,23 @@
 - [x] Aplicar estilos dark con bordes superiores
 - [x] Hacer responsive (columnas se apilan en móvil)
 
-### Tarea 1.8: Crear Landing Page principal
-- [ ] Crear archivo `app/(marketing)/page.tsx`
-- [ ] Implementar Hero Section con:
+### Tarea 1.8: Crear Landing Page principal ✅
+- [x] Crear archivo `app/(marketing)/page.tsx`
+- [x] Implementar Hero Section con:
   - Título principal grande y llamativo
   - Descripción breve del servidor
   - Dos botones CTA: "Ver Servidores" y "Unirse a Discord"
   - Imagen de fondo o video de Minecraft
-- [ ] Añadir sección "Características" con cards:
+- [x] Añadir sección "Características" con cards:
   - Mínimo 3 características (ej: "Mods únicos", "Comunidad activa", "Eventos semanales")
   - Usar Card de shadcn/ui
   - Iconos de Lucide React
-- [ ] Añadir sección "Estadísticas rápidas":
+- [x] Añadir sección "Estadísticas rápidas":
   - Jugadores activos (obtenido de API)
   - Servidores disponibles
   - Años online
-- [ ] Añadir animaciones de entrada con Framer Motion
-- [ ] Hacer toda la página responsive
+- [x] Añadir animaciones de entrada con Framer Motion
+- [x] Hacer toda la página responsive
 
 ### Tarea 1.9: Crear hook personalizado para datos de Exaroton
 - [ ] Crear archivo `lib/hooks/useServers.ts`
