@@ -377,11 +377,11 @@
 
 ## 📊 FASE 3: Dashboard de Servidores + Animaciones + SEO (1-2 días)
 
-### Tarea 3.1: Crear componente ServerCard
-- [ ] Crear archivo `components/ServerCard.tsx`
-- [ ] Aceptar props: `server: ExarotonServer`
-- [ ] Usar Card de shadcn/ui
-- [ ] Mostrar:
+### Tarea 3.1: Crear componente ServerCard ✅
+- [x] Crear archivo `components/ServerCard.tsx`
+- [x] Aceptar props: `server: ExarotonServer`
+- [x] Usar Card de shadcn/ui
+- [x] Mostrar:
   - Nombre del servidor
   - Status con indicador visual (círculo verde/rojo/amarillo)
   - MOTD del servidor
@@ -389,10 +389,10 @@
   - RAM utilizada
   - Versión y software
   - IP y puerto
-- [ ] Añadir botón "Copiar IP" que copie al clipboard
-- [ ] Añadir botón "Unirse" (link si es aplicable)
-- [ ] Implementar animaciones hover con Framer Motion
-- [ ] Hacer responsive
+- [x] Añadir botón "Copiar IP" que copie al clipboard
+- [x] Añadir botón "Unirse" (link si es aplicable)
+- [x] Implementar animaciones hover con Framer Motion
+- [x] Hacer responsive
 
 ### Tarea 3.2: Crear componente StatusBadge
 - [ ] Crear archivo `components/StatusBadge.tsx`
