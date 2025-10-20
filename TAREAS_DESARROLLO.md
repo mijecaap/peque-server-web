@@ -242,11 +242,11 @@
   - `createdAt` (datetime)
 - [x] Exportar el schema
 
-### Tarea 2.5: Registrar schemas en Sanity
-- [ ] Abrir archivo `sanity/sanity.config.ts`
-- [ ] Importar schemas de news y gallery
-- [ ] Añadir schemas al array de schemas en la configuración
-- [ ] Verificar que no hay errores de compilación
+### Tarea 2.5: Registrar schemas en Sanity ✅
+- [x] Abrir archivo `sanity/sanity.config.ts`
+- [x] Importar schemas de news y gallery
+- [x] Añadir schemas al array de schemas en la configuración
+- [x] Verificar que no hay errores de compilación
 
 ### Tarea 2.6: Iniciar Sanity Studio y crear contenido de prueba
 - [ ] Ejecutar `npm run dev` en la carpeta sanity/
