@@ -191,16 +191,16 @@
 
 ## 📝 FASE 2: Setup Sanity CMS + Noticias + Galería (2-3 días)
 
-### Tarea 2.1: Inicializar Sanity Studio
-- [ ] Ejecutar `npm create sanity@latest` en la carpeta `sanity/`
-- [ ] Seleccionar opciones:
+### Tarea 2.1: Inicializar Sanity Studio ✅
+- [x] Ejecutar `npm create sanity@latest` en la carpeta `sanity/`
+- [x] Seleccionar opciones:
   - Crear nuevo proyecto
   - Dataset: production
   - Output path: sanity/
-- [ ] Registrarse/iniciar sesión en Sanity.io
-- [ ] Anotar el Project ID generado
-- [ ] Añadir Project ID a `.env.local` como `NEXT_PUBLIC_SANITY_PROJECT_ID`
-- [ ] Añadir Dataset a `.env.local` como `NEXT_PUBLIC_SANITY_DATASET=production`
+- [x] Registrarse/iniciar sesión en Sanity.io
+- [x] Anotar el Project ID generado (wcwrnwlc)
+- [x] Añadir Project ID a `.env.local` como `NEXT_PUBLIC_SANITY_PROJECT_ID`
+- [x] Añadir Dataset a `.env.local` como `NEXT_PUBLIC_SANITY_DATASET=production`
 
 ### Tarea 2.2: Configurar CORS en Sanity
 - [ ] Ir a https://www.sanity.io/manage
