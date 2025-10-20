@@ -274,9 +274,9 @@
 - [x] Exportar el cliente
 - [x] Crear función helper para imageUrlBuilder
 
-### Tarea 2.8: Crear tipos TypeScript para Sanity
-- [ ] Crear archivo `types/sanity.ts`
-- [ ] Definir interface `NewsArticle`:
+### Tarea 2.8: Crear tipos TypeScript para Sanity ✅
+- [x] Crear archivo `types/sanity.ts`
+- [x] Definir interface `NewsArticle`:
   - `_id: string`
   - `title: string`
   - `slug: { current: string }`
@@ -286,8 +286,8 @@
   - `author: string`
   - `excerpt: string`
   - `body: any[]`
-- [ ] Definir interface `GalleryItem`
-- [ ] Exportar interfaces
+- [x] Definir interface `GalleryItem`
+- [x] Exportar interfaces
 
 ### Tarea 2.9: Crear queries GROQ para Sanity
 - [ ] Crear archivo `lib/sanity-queries.ts`
