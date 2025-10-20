@@ -30,22 +30,22 @@
 - [x] Instalar next-sanity (best practice para Next.js): `npm install next-sanity`
 - [x] Verificar que todas las dependencias se instalaron en `package.json`
 
-### Tarea 0.3: Configurar shadcn/ui
-- [ ] Inicializar shadcn/ui con `npx shadcn-ui@latest init`
-- [ ] Configurar el directorio de componentes como `components/ui`
-- [ ] Seleccionar estilo base (recomendado: Default)
-- [ ] Instalar componentes básicos: Card, Badge, Button, Avatar
-- [ ] Comando: `npx shadcn-ui@latest add card badge button avatar`
-- [ ] Verificar que los componentes se crearon en `components/ui/`
+### Tarea 0.3: Configurar shadcn/ui ✅
+- [x] Inicializar shadcn/ui con `npx shadcn@latest init`
+- [x] Configurar el directorio de componentes como `components/ui`
+- [x] Seleccionar estilo base: Neutral (color base)
+- [x] Instalar componentes básicos: Card, Badge, Button, Avatar
+- [x] Comando: `npx shadcn@latest add card badge button avatar`
+- [x] Verificar que los componentes se crearon en `components/ui/`
 
-### Tarea 0.4: Configurar estructura de carpetas
-- [ ] Crear carpeta `app/(marketing)/` para páginas públicas
-- [ ] Crear carpeta `app/api/exaroton/` para rutas API
-- [ ] Crear carpeta `components/` para componentes React
-- [ ] Crear carpeta `lib/` para utilidades y clientes API
-- [ ] Crear carpeta `types/` para definiciones TypeScript
-- [ ] Crear carpeta `public/images/` para assets estáticos
-- [ ] Crear carpeta `sanity/` para configuración del CMS
+### Tarea 0.4: Configurar estructura de carpetas ✅
+- [x] Crear carpeta `app/(marketing)/` para páginas públicas
+- [x] Crear carpeta `app/api/exaroton/` para rutas API
+- [x] Crear carpeta `components/` para componentes React (ya existe con shadcn/ui)
+- [x] Crear carpeta `lib/` para utilidades y clientes API (ya existe con shadcn/ui)
+- [x] Crear carpeta `types/` para definiciones TypeScript
+- [x] Crear carpeta `public/images/` para assets estáticos
+- [x] Crear carpeta `sanity/` para configuración del CMS
 
 ### Tarea 0.5: Configurar variables de entorno
 - [ ] Crear archivo `.env.local` en la raíz del proyecto
