@@ -58,13 +58,13 @@
 
 ## 🚀 FASE 1: Setup Next.js + Landing Page + API Exaroton (1-2 días)
 
-### Tarea 1.1: Configurar Tailwind CSS avanzado
-- [ ] Abrir archivo `tailwind.config.ts`
-- [ ] Añadir colores personalizados para tema gaming (verde Minecraft, negro, grises)
-- [ ] Configurar fuentes personalizadas si es necesario
-- [ ] Añadir animaciones custom en `theme.extend.animation`
-- [ ] Ejemplo: `glow`, `pulse-slow`, `fade-in`
-- [ ] Probar la configuración creando un componente de prueba
+### Tarea 1.1: Configurar Tailwind CSS avanzado ✅
+- [x] Abrir archivo `tailwind.config.ts`
+- [x] Añadir colores personalizados para tema gaming (verde Minecraft, negro, grises)
+- [x] Configurar fuentes personalizadas si es necesario
+- [x] Añadir animaciones custom en `theme.extend.animation`
+- [x] Ejemplo: `glow`, `pulse-slow`, `fade-in`
+- [x] Probar la configuración creando un componente de prueba
 
 ### Tarea 1.2: Crear tipos TypeScript para Exaroton API
 - [ ] Crear archivo `types/exaroton.ts`
