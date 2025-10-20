@@ -165,19 +165,19 @@
 - [x] Añadir animaciones de entrada con Framer Motion
 - [x] Hacer toda la página responsive
 
-### Tarea 1.9: Crear hook personalizado para datos de Exaroton
-- [ ] Crear archivo `lib/hooks/useServers.ts`
-- [ ] Implementar custom hook usando SWR:
+### Tarea 1.9: Crear hook personalizado para datos de Exaroton ✅
+- [x] Crear archivo `lib/hooks/useServers.ts`
+- [x] Implementar custom hook usando SWR:
   ```typescript
   export function useServers() {
     const { data, error, isLoading } = useSWR('/api/exaroton/servers', fetcher)
     return { servers: data, error, isLoading }
   }
   ```
-- [ ] Crear función fetcher genérica
-- [ ] Configurar revalidación cada 30 segundos
-- [ ] Crear hook similar `useServer(id)` para servidor individual
-- [ ] Exportar ambos hooks
+- [x] Crear función fetcher genérica
+- [x] Configurar revalidación cada 30 segundos
+- [x] Crear hook similar `useServer(id)` para servidor individual
+- [x] Exportar ambos hooks
 
 ### Tarea 1.10: Integrar datos reales en Landing Page
 - [ ] Importar hook `useServers()` en `page.tsx`
