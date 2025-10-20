@@ -109,43 +109,43 @@
   - Retorne JSON con los datos del servidor específico
 - [x] Probar endpoints en navegador o Postman
 
-### Tarea 1.5: Crear Layout principal de la aplicación
-- [ ] Editar archivo `app/layout.tsx`
-- [ ] Configurar metadata básico:
+### Tarea 1.5: Crear Layout principal de la aplicación ✅
+- [x] Editar archivo `app/layout.tsx`
+- [x] Configurar metadata básico:
   - `title: 'Minecraft Server - Nombre de tu servidor'`
   - `description: 'Servidor de Minecraft con mods/plugins'`
   - `keywords: ['minecraft', 'servidor', 'gaming']`
-- [ ] Añadir fuente personalizada (opcional): Inter, Poppins o similar
-- [ ] Crear estructura HTML con:
+- [x] Añadir fuente personalizada (opcional): Inter, Poppins o similar
+- [x] Crear estructura HTML con:
   - Header fijo con logo y navegación
   - Main content area con `{children}`
   - Footer con links y redes sociales
-- [ ] Aplicar estilos base de Tailwind
-- [ ] Usar colores dark mode por defecto
+- [x] Aplicar estilos base de Tailwind
+- [x] Usar colores dark mode por defecto
 
-### Tarea 1.6: Crear componente de Navegación (Header)
-- [ ] Crear archivo `components/Header.tsx`
-- [ ] Implementar navbar responsive con:
+### Tarea 1.6: Crear componente de Navegación (Header) ✅
+- [x] Crear archivo `components/Header.tsx`
+- [x] Implementar navbar responsive con:
   - Logo del servidor (imagen o texto)
   - Links: Inicio, Servidores, Noticias, Galería
   - Botón CTA "Unirse a Discord"
   - Menú hamburguesa para móvil
-- [ ] Usar `next/link` para navegación
-- [ ] Aplicar sticky positioning con `sticky top-0 z-50`
-- [ ] Añadir backdrop blur y transparencia: `bg-black/80 backdrop-blur-md`
-- [ ] Implementar estado de menú móvil con useState
-- [ ] Añadir animaciones de Framer Motion para el menú móvil
+- [x] Usar `next/link` para navegación
+- [x] Aplicar sticky positioning con `sticky top-0 z-50`
+- [x] Añadir backdrop blur y transparencia: `bg-black/80 backdrop-blur-md`
+- [x] Implementar estado de menú móvil con useState
+- [x] Añadir animaciones de Framer Motion para el menú móvil
 
-### Tarea 1.7: Crear componente Footer
-- [ ] Crear archivo `components/Footer.tsx`
-- [ ] Implementar footer con tres columnas:
+### Tarea 1.7: Crear componente Footer ✅
+- [x] Crear archivo `components/Footer.tsx`
+- [x] Implementar footer con tres columnas:
   - Columna 1: Información del servidor y logo
   - Columna 2: Links rápidos (Inicio, Servidores, Noticias, Términos)
   - Columna 3: Redes sociales (Discord, YouTube, TikTok, Instagram)
-- [ ] Añadir copyright con año dinámico: `© ${new Date().getFullYear()}`
-- [ ] Usar iconos de Lucide React para redes sociales
-- [ ] Aplicar estilos dark con bordes superiores
-- [ ] Hacer responsive (columnas se apilan en móvil)
+- [x] Añadir copyright con año dinámico: `© ${new Date().getFullYear()}`
+- [x] Usar iconos de Lucide React para redes sociales
+- [x] Aplicar estilos dark con bordes superiores
+- [x] Hacer responsive (columnas se apilan en móvil)
 
 ### Tarea 1.8: Crear Landing Page principal
 - [ ] Crear archivo `app/(marketing)/page.tsx`
