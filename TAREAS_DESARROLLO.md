@@ -352,26 +352,26 @@
 - [x] Implementar filtros por categoría si aplicable
 - [x] Añadir animaciones stagger con Framer Motion
 
-### Tarea 2.14: Instalar y configurar Portable Text (para contenido rico)
-- [ ] Instalar: `npm install @portabletext/react`
-- [ ] Crear archivo `components/PortableText.tsx`
-- [ ] Configurar componentes custom para:
+### Tarea 2.14: Instalar y configurar Portable Text (para contenido rico) ✅
+- [x] Instalar: `npm install @portabletext/react`
+- [x] Crear archivo `components/PortableText.tsx`
+- [x] Configurar componentes custom para:
   - Headings (h1, h2, h3)
   - Párrafos
   - Listas
   - Imágenes
   - Links
-- [ ] Aplicar estilos Tailwind apropiados
-- [ ] Usar este componente en la página de noticia individual
+- [x] Aplicar estilos Tailwind apropiados
+- [x] Usar este componente en la página de noticia individual
 
-### Tarea 2.15: Optimizar imágenes de Sanity
-- [ ] Crear utility en `lib/sanity-image.ts`
-- [ ] Usar imageUrlBuilder de Sanity
-- [ ] Crear función que genere URLs optimizadas:
+### Tarea 2.15: Optimizar imágenes de Sanity ✅
+- [x] Crear utility en `lib/sanity-image.ts`
+- [x] Usar imageUrlBuilder de Sanity
+- [x] Crear función que genere URLs optimizadas:
   - Diferentes tamaños
   - Formato webp
   - Quality configurado
-- [ ] Implementar en todos los componentes que usen imágenes de Sanity
+- [x] Implementar en todos los componentes que usen imágenes de Sanity
 
 ---
 
