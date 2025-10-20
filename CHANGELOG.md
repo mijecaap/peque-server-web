@@ -5,6 +5,51 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.4.0] - 2025-10-20
+
+### ♻️ Refactorizado
+
+#### Centralización de Configuración
+- **Nuevo archivo `lib/constants.ts`**: Fuente única de verdad para toda la configuración del proyecto
+- **SOCIAL_LINKS**: URLs centralizadas de redes sociales
+  - Discord: `https://discord.gg/MBwTzfafsp`
+  - YouTube: `https://www.youtube.com/@pequeserver`
+  - TikTok: `https://www.tiktok.com/@pequeno_servidor`
+  - Instagram: `https://www.instagram.com/pequeno_servidor`
+- **EXTERNAL_LINKS**: Enlaces externos importantes
+  - PayPal: `https://www.paypal.com/paypalme/WednerV`
+- **CONTACT_INFO**: Información de contacto del administrador
+  - Admin Discord: `@wedner THE JOSE`
+  - País del admin: `Costa Rica 🇨🇷`
+- **SERVER_CONFIG**: Configuración de servidores
+  - Precio premium: `$4 USD`
+  - Días de suscripción: `30 días`
+  - IP premium: `premium.pequeserver.com`
+
+#### Reemplazo de URLs Hardcodeadas
+- **Header**: 2 referencias a Discord actualizadas
+- **Footer**: 3 referencias a redes sociales actualizadas
+  - Cambiado Discord por TikTok en links del footer
+  - Actualizado icono de `MessageCircle` a `Video` (TikTok)
+- **Página de inicio**: 1 referencia a Discord actualizada
+- **Página "¿Cómo entrar?"**:
+  - 3 referencias a Discord actualizadas
+  - 1 referencia a PayPal actualizada
+  - Precio premium usando constante
+  - Días de suscripción usando constante
+  - Información de contacto usando constantes
+
+### 🎨 Mejoras de UI
+- **Footer**: Reemplazado enlace de Discord por TikTok para mejor presencia en redes
+
+### 🔧 Beneficios Técnicos
+- **Mantenibilidad**: Cambiar URLs ahora solo requiere editar un archivo
+- **Type-safety**: TypeScript con `as const` para tipos literales
+- **Consistencia**: Todas las URLs y configuración en un solo lugar
+- **Escalabilidad**: Fácil añadir nuevas constantes de configuración
+
+---
+
 ## [1.3.0] - 2025-10-20
 
 ### ✨ Agregado
@@ -336,6 +381,7 @@ Este proyecto sigue [SemVer](https://semver.org/):
 
 ---
 
+**[1.4.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.4.0
 **[1.3.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.3.0
 **[1.2.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.2.0
 **[1.1.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.1.0

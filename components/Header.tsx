@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { SOCIAL_LINKS } from "@/lib/constants"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -40,7 +41,7 @@ export function Header() {
           ))}
           <Button asChild variant="default">
             <a
-              href="https://discord.gg/tu-servidor"
+              href={SOCIAL_LINKS.discord}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -80,7 +81,7 @@ export function Header() {
             <div className="px-3 pt-2">
               <Button asChild variant="default" className="w-full">
                 <a
-                  href="https://discord.gg/tu-servidor"
+                  href={SOCIAL_LINKS.discord}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

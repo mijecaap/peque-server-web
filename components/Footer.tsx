@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Youtube, Instagram, MessageCircle } from "lucide-react"
+import { Youtube, Instagram, Video } from "lucide-react"
+import { SOCIAL_LINKS } from "@/lib/constants"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -19,18 +20,18 @@ export function Footer() {
 
   const socialLinks = [
     {
-      name: "Discord",
-      href: "https://discord.gg/tu-servidor",
-      icon: MessageCircle,
+      name: "TikTok",
+      href: SOCIAL_LINKS.tiktok,
+      icon: Video,
     },
     {
       name: "YouTube",
-      href: "https://youtube.com/@tu-canal",
+      href: SOCIAL_LINKS.youtube,
       icon: Youtube,
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/tu-cuenta",
+      href: SOCIAL_LINKS.instagram,
       icon: Instagram,
     },
   ]

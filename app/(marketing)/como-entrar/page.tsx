@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { SOCIAL_LINKS, EXTERNAL_LINKS, CONTACT_INFO, SERVER_CONFIG } from "@/lib/constants"
 import {
   Accordion,
   AccordionContent,
@@ -99,7 +100,7 @@ export default function ComoEntrarPage() {
                       </CardDescription>
                     </div>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold">$4</span>
+                      <span className="text-4xl font-bold">${SERVER_CONFIG.premiumPrice}</span>
                       <span className="text-muted-foreground">/mes</span>
                     </div>
                   </CardHeader>
@@ -195,7 +196,7 @@ export default function ComoEntrarPage() {
                         </div>
                         <Button className="w-full" variant="outline" asChild>
                           <a
-                            href="https://discord.gg/tu-servidor"
+                            href={SOCIAL_LINKS.discord}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -249,7 +250,7 @@ export default function ComoEntrarPage() {
                       <div className="flex-1">
                         <CardTitle className="mb-2">Contacta al Administrador</CardTitle>
                         <CardDescription className="text-base">
-                          Envía un mensaje directo a <strong>@wedner THE JOSE</strong> en
+                          Envía un mensaje directo a <strong>{CONTACT_INFO.adminDiscord}</strong> en
                           Discord indicando tu interés en unirte al servidor premium
                         </CardDescription>
                       </div>
@@ -270,7 +271,7 @@ export default function ComoEntrarPage() {
                         <div>
                           <CardTitle className="mb-2">Realiza el Pago</CardTitle>
                           <CardDescription className="text-base mb-4">
-                            El costo es de <strong>$4 USD por mes</strong>. Métodos de pago
+                            El costo es de <strong>${SERVER_CONFIG.premiumPrice} {SERVER_CONFIG.priceCurrency} por mes</strong>. Métodos de pago
                             disponibles:
                           </CardDescription>
                         </div>
@@ -281,7 +282,7 @@ export default function ComoEntrarPage() {
                             <div>
                               <p className="font-medium mb-1">PayPal (Internacional)</p>
                               <a
-                                href="https://www.paypal.com/paypalme/WednerV"
+                                href={EXTERNAL_LINKS.paypal}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm text-primary hover:underline inline-flex items-center gap-1"
@@ -295,7 +296,7 @@ export default function ComoEntrarPage() {
                           <div className="flex items-start gap-3">
                             <DollarSign className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <div>
-                              <p className="font-medium mb-1">Costa Rica 🇨🇷</p>
+                              <p className="font-medium mb-1">{CONTACT_INFO.adminCountry}</p>
                               <p className="text-sm text-muted-foreground">
                                 SINPE, transferencia bancaria o efectivo (en persona)
                               </p>
@@ -373,7 +374,7 @@ export default function ComoEntrarPage() {
                           <span className="text-primary">•</span>
                           <span>
                             Un solo pago te da acceso a todos los servidores premium durante
-                            30 días
+                            {SERVER_CONFIG.subscriptionDays} días
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
@@ -596,7 +597,7 @@ export default function ComoEntrarPage() {
                     ¿El pago premium es recurrente?
                   </AccordionTrigger>
                   <AccordionContent>
-                    No, el pago no es automático. Cada 30 días deberás renovar tu acceso
+                    No, el pago no es automático. Cada {SERVER_CONFIG.subscriptionDays} días deberás renovar tu acceso
                     manualmente. Te enviaremos un recordatorio antes de que expire tu
                     membresía premium para que puedas decidir si quieres continuar.
                   </AccordionContent>
@@ -643,7 +644,7 @@ export default function ComoEntrarPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <Button size="lg" className="w-full" asChild>
                     <a
-                      href="https://discord.gg/tu-servidor"
+                      href={SOCIAL_LINKS.discord}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gamepad2, Users, Calendar, Zap } from "lucide-react"
 import { useServers } from "@/lib/hooks/useServers"
+import { SOCIAL_LINKS } from "@/lib/constants"
 import {
   fadeIn,
   slideUp,
@@ -82,7 +83,7 @@ export default function Home() {
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg px-8">
                 <a
-                  href="https://discord.gg/tu-servidor"
+                  href={SOCIAL_LINKS.discord}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
