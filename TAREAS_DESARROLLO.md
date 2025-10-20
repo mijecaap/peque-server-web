@@ -47,12 +47,12 @@
 - [x] Crear carpeta `public/images/` para assets estáticos
 - [x] Crear carpeta `sanity/` para configuración del CMS
 
-### Tarea 0.5: Configurar variables de entorno
-- [ ] Crear archivo `.env.local` en la raíz del proyecto
-- [ ] Añadir variable `EXAROTON_API_KEY=tu_api_key_aqui`
-- [ ] Añadir variable `NEXT_PUBLIC_SITE_URL=http://localhost:3000`
-- [ ] Crear archivo `.env.example` con las variables (sin valores)
-- [ ] Añadir `.env.local` al `.gitignore`
+### Tarea 0.5: Configurar variables de entorno ✅
+- [x] Crear archivo `.env.local` en la raíz del proyecto
+- [x] Añadir variable `EXAROTON_API_KEY=tu_api_key_aqui`
+- [x] Añadir variable `NEXT_PUBLIC_SITE_URL=http://localhost:3000`
+- [x] Crear archivo `.env.example` con las variables (sin valores)
+- [x] Añadir `.env.local` al `.gitignore` (ya estaba incluido con `.env*`)
 
 ---
 
