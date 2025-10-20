@@ -5,6 +5,79 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.5.0] - 2025-10-20
+
+### 🎨 Rediseño Mayor
+
+#### Landing Page Completamente Renovada
+- **Nueva lógica de negocio implementada**: Orientada a conversión y diferenciación premium
+- **Hero Section rediseñado**:
+  - Badge "Servidor Premium de Minecraft" con icono Crown
+  - Título impactante: "La Experiencia Definitiva de Minecraft"
+  - Estadísticas dinámicas en tiempo real (jugadores activos, servidores)
+  - CTAs principales: "Cómo Entrar" y "Unirse a Discord"
+  - Card de acceso rápido a servidores premium
+  - Mensaje claro: acceso gratuito requiere Discord primero
+
+#### Sección de Estadísticas Clave
+- **4 métricas principales con datos reales**:
+  - Jugadores Activos (del servicio de Exaroton)
+  - Uptime calculado dinámicamente (% servidores online)
+  - Servidores Interconectados (cantidad real)
+  - Protección de Claims (100% garantizado)
+- **Iconografía mejorada**: Users, Clock, Server, Shield
+- **Diseño con círculos de iconos y gradientes**
+
+#### Sección de Características Diferenciadoras
+- **6 beneficios únicos destacados**:
+  1. **Mundos Personalizados**: Biomas únicos y dimensiones exclusivas
+  2. **Misiones Épicas**: Desafíos con recompensas exclusivas
+  3. **Hardware Premium**: Cero lag, máxima estabilidad 24/7
+  4. **Comunidad Activa**: Eventos frecuentes y torneos
+  5. **Múltiples Servidores**: Survival, Creativo, Anárquico, Minijuegos (número dinámico)
+  6. **Protección Anti-Griefing**: Sistema de claims para construcciones
+- **Cards mejoradas**: Hover effects con scale y shadow
+- **Iconos específicos**: Globe, Trophy, Zap, Users, Server, Shield
+
+#### Sección "Elige Tu Forma de Jugar"
+- **Comparación lado a lado**:
+  - **Premium**: Badge "Recomendado", 5 beneficios listados, CTA "Ver Cómo Acceder"
+  - **Gratuito**: Descripción del modo anárquico, 4 beneficios, nota de IP en Discord
+- **Visual diferenciado**:
+  - Premium: gradiente primary/accent, círculo decorativo
+  - Gratuito: diseño más simple, focus en comunidad
+- **Estrategia clara**: Premium visible y accesible, gratuito dirige a Discord
+
+#### CTA Final Mejorado
+- **Card con múltiples capas visuales**: Gradiente, grid background, badges
+- **Mensaje emocional**: "Comienza Tu Aventura Hoy", "crear recuerdos inolvidables"
+- **Doble CTA**: "Cómo Entrar" (principal) y "Ver Servidores" (secundario)
+- **Link a Discord** en footer del card para preguntas
+
+### 🔧 Mejoras Técnicas
+- **Datos en tiempo real**: Integración completa con `useServers()` hook
+- **Cálculo dinámico de uptime**: Basado en servidores online vs total
+- **Estadísticas reales**: Jugadores activos y cantidad de servidores desde API
+- **Manejo de estados**: Loading, error, y datos correctamente gestionados
+
+### 🎯 Lógica de Negocio Aplicada
+- ✅ **Presentación de valor**: "Experiencia Definitiva", diferenciación clara
+- ✅ **Acceso Premium vs Gratuito**: Visibilidad de premium, Discord para gratuito
+- ✅ **Características diferenciadoras**: 6 puntos únicos destacados
+- ✅ **Elementos de conversión**: CTAs estratégicos, mensajes emocionales
+- ✅ **Métricas de confianza**: Uptime, players, servers, claims
+- ✅ **Fomento de comunidad**: Discord integrado en múltiples puntos
+
+### 🎨 Mejoras de UI/UX
+- **Nuevos iconos de Lucide**: Globe, Trophy, Crown, Sparkles, MapPin, Clock
+- **Badges estratégicos**: "Servidor Premium", "Recomendado", "Únete Ahora"
+- **Gradientes mejorados**: Combinaciones primary/accent más sofisticadas
+- **Grid backgrounds**: Textura sutil con SVG pattern
+- **Círculos decorativos**: Elementos visuales en cards premium
+- **Hover effects**: Scale y shadow en cards de features
+
+---
+
 ## [1.4.0] - 2025-10-20
 
 ### ♻️ Refactorizado
@@ -381,6 +454,7 @@ Este proyecto sigue [SemVer](https://semver.org/):
 
 ---
 
+**[1.5.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.5.0
 **[1.4.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.4.0
 **[1.3.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.3.0
 **[1.2.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.2.0
