@@ -179,13 +179,13 @@
 - [x] Crear hook similar `useServer(id)` para servidor individual
 - [x] Exportar ambos hooks
 
-### Tarea 1.10: Integrar datos reales en Landing Page
-- [ ] Importar hook `useServers()` en `page.tsx`
-- [ ] Obtener datos de servidores
-- [ ] Mostrar estadísticas reales en la sección correspondiente
-- [ ] Añadir estados de carga con skeleton o spinner
-- [ ] Manejar errores mostrando mensaje amigable
-- [ ] Probar que los datos se actualizan correctamente
+### Tarea 1.10: Integrar datos reales en Landing Page ✅
+- [x] Importar hook `useServers()` en `page.tsx`
+- [x] Obtener datos de servidores
+- [x] Mostrar estadísticas reales en la sección correspondiente
+- [x] Añadir estados de carga con skeleton o spinner
+- [x] Manejar errores mostrando mensaje amigable
+- [x] Probar que los datos se actualizan correctamente
 
 ---
 

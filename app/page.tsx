@@ -5,8 +5,17 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gamepad2, Users, Calendar, Zap } from "lucide-react"
+import { useServers } from "@/lib/hooks/useServers"
 
 export default function Home() {
+  // Fetch real server data
+  const { servers, isLoading: serversLoading, error: serversError } = useServers()
+
+  // Calculate stats from real data
+  const totalPlayers = servers?.reduce((acc, server) => acc + server.players.count, 0) || 0
+  const totalServers = servers?.length || 0
+  const maxPlayers = servers?.reduce((acc, server) => acc + server.players.max, 0) || 0
+
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -168,7 +177,13 @@ export default function Home() {
                 <Card className="text-center">
                   <CardHeader>
                     <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      500+
+                      {serversLoading ? (
+                        <span className="animate-pulse">...</span>
+                      ) : serversError ? (
+                        "N/A"
+                      ) : (
+                        `${totalPlayers}/${maxPlayers}`
+                      )}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -183,7 +198,13 @@ export default function Home() {
                 <Card className="text-center">
                   <CardHeader>
                     <CardTitle className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      3
+                      {serversLoading ? (
+                        <span className="animate-pulse">...</span>
+                      ) : serversError ? (
+                        "N/A"
+                      ) : (
+                        totalServers
+                      )}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
