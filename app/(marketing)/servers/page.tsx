@@ -9,7 +9,6 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { RefreshCw, Search, Server, AlertCircle } from 'lucide-react'
-import { getStatusLabel } from '@/types/exaroton'
 import { motion } from 'framer-motion'
 
 type FilterType = 'all' | 'online' | 'offline'

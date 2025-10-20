@@ -1,0 +1,12 @@
+# Configuración de Cloudflare Pages
+name = "peque-server-web"
+compatibility_date = "2025-10-20"
+
+[build]
+  command = "npm run build"
+  
+[build.upload]
+  format = "service-worker"
+
+# Variables de entorno se configuran en Cloudflare Dashboard
+# o mediante: wrangler pages secret put VARIABLE_NAME

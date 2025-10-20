@@ -1,0 +1,10 @@
+# Configuración de Netlify para Next.js 15
+[build]
+  command = "npm run build"
+  
+[build.environment]
+  NODE_VERSION = "20"
+
+# El plugin de Next.js maneja automáticamente todo
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

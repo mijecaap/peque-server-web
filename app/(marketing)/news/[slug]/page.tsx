@@ -97,7 +97,7 @@ export async function generateMetadata({
  */
 const portableTextComponents = {
   types: {
-    image: ({ value }: any) => {
+    image: ({ value }: { value: { asset?: { _ref: string }; alt?: string; caption?: string } }) => {
       if (!value?.asset?._ref) {
         return null
       }
@@ -120,41 +120,41 @@ const portableTextComponents = {
     },
   },
   block: {
-    h2: ({ children }: any) => (
+    h2: ({ children }: { children?: React.ReactNode }) => (
       <h2 className="text-3xl font-bold mt-8 mb-4">{children}</h2>
     ),
-    h3: ({ children }: any) => (
+    h3: ({ children }: { children?: React.ReactNode }) => (
       <h3 className="text-2xl font-bold mt-6 mb-3">{children}</h3>
     ),
-    h4: ({ children }: any) => (
+    h4: ({ children }: { children?: React.ReactNode }) => (
       <h4 className="text-xl font-bold mt-4 mb-2">{children}</h4>
     ),
-    normal: ({ children }: any) => (
+    normal: ({ children }: { children?: React.ReactNode }) => (
       <p className="mb-4 leading-7">{children}</p>
     ),
-    blockquote: ({ children }: any) => (
+    blockquote: ({ children }: { children?: React.ReactNode }) => (
       <blockquote className="border-l-4 border-primary pl-4 italic my-6">
         {children}
       </blockquote>
     ),
   },
   list: {
-    bullet: ({ children }: any) => (
+    bullet: ({ children }: { children?: React.ReactNode }) => (
       <ul className="list-disc list-inside mb-4 space-y-2">{children}</ul>
     ),
-    number: ({ children }: any) => (
+    number: ({ children }: { children?: React.ReactNode }) => (
       <ol className="list-decimal list-inside mb-4 space-y-2">{children}</ol>
     ),
   },
   marks: {
-    strong: ({ children }: any) => <strong className="font-bold">{children}</strong>,
-    em: ({ children }: any) => <em className="italic">{children}</em>,
-    code: ({ children }: any) => (
+    strong: ({ children }: { children?: React.ReactNode }) => <strong className="font-bold">{children}</strong>,
+    em: ({ children }: { children?: React.ReactNode }) => <em className="italic">{children}</em>,
+    code: ({ children }: { children?: React.ReactNode }) => (
       <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">
         {children}
       </code>
     ),
-    link: ({ children, value }: any) => {
+    link: ({ children, value }: { children?: React.ReactNode; value?: { href?: string } }) => {
       const target = value?.href?.startsWith('http') ? '_blank' : undefined
       return (
         <a
