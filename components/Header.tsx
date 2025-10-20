@@ -11,6 +11,7 @@ export function Header() {
   const navigation = [
     { name: "Inicio", href: "/" },
     { name: "Servidores", href: "/servers" },
+    { name: "¿Cómo entrar?", href: "/como-entrar" },
     // Temporalmente deshabilitado
     // { name: "Noticias", href: "/news" },
     // { name: "Galería", href: "/gallery" },

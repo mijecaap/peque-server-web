@@ -5,6 +5,92 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.3.0] - 2025-10-20
+
+### ✨ Agregado
+
+#### Nueva Página: ¿Cómo entrar?
+- **Ruta `/como-entrar`**: Página completa de onboarding para nuevos jugadores
+- **Lógica de negocio implementada**:
+  - Segmentación clara entre acceso Premium (pago) y Gratuito (anárquico)
+  - Comparación visual side-by-side de ambas modalidades con cards distintivas
+  - Incentivo para unirse a Discord (IP gratuita solo disponible allí)
+  - Proceso de conversión de usuarios gratuitos a premium optimizado
+
+#### Sección de Servidores Premium
+- **Información detallada** de beneficios premium:
+  - Acceso a 7+ servidores exclusivos
+  - Pack de mods personalizados
+  - Mejor rendimiento y estabilidad
+  - Modo Survival exclusivo
+  - Lista blanca (whitelist)
+  - Soporte prioritario
+- **Botón de redirección** a la página de servidores (en lugar de copiar IP)
+- **Precio destacado**: $4 USD/mes con badge de Crown animado
+
+#### Sección de Servidor Gratuito
+- **Descripción del modo anárquico** sin restricciones
+- **Estrategia de comunidad**: IP revelada solo en Discord
+- **Call-to-action prominente** para unirse a Discord
+- Beneficios claros para comenzar sin costo
+
+#### Guía de Acceso Premium (4 Pasos)
+1. **Contacto**: Instrucciones para contactar a @wedner THE JOSE
+2. **Pago**: Múltiples métodos documentados:
+   - PayPal internacional (paypal.me/WednerV)
+   - SINPE, transferencia o efectivo para Costa Rica 🇨🇷
+   - Otros intercambios (consultar)
+3. **Activación**: Explicación del proceso de whitelist
+4. **Pack de mods**: Entrega de mods e instrucciones
+
+#### Guía General de Conexión
+- **Requisitos del sistema**: Minecraft Java o Bedrock para PC
+- **Restricción de consolas**: Advertencia clara de no soportar PlayStation/Xbox/Switch
+- **Paso a paso visual** con iconos:
+  - Verificar tener Minecraft
+  - Abrir Multijugador
+  - Añadir servidor
+  - Conectarse y jugar
+
+#### Sección de FAQ Completa
+- **7 preguntas frecuentes** con Accordion component:
+  - Versiones compatibles
+  - Prueba antes de pagar
+  - Reglas del servidor
+  - Soporte técnico
+  - Restricciones de plataforma
+  - Pagos recurrentes
+  - Política de compartir mods
+
+#### Elementos de UI/UX
+- **Badges diferenciados**: Premium (Crown) vs Gratuito (Users)
+- **Colores temáticos**: Verde primary para premium, accent para gratuito
+- **Iconografía consistente**: Monitor, Gamepad2, Check, Shield, DollarSign, etc.
+- **Animaciones Framer Motion**: fadeIn, slideUp, staggerContainer, scaleIn
+- **Cards informativos** con gradientes y bordes destacados
+- **Layout responsive** optimizado para móvil y desktop
+
+#### Navegación
+- **Enlace en Header**: "¿Cómo entrar?" añadido al menú principal
+- **Integración con rutas existentes**: Links a /servers y Discord
+- **CTA final**: Sección de llamado a la acción con dos botones principales
+
+### 📝 Notas Importantes Implementadas
+- Un solo pago da acceso a todos los servidores premium por 30 días
+- Política de no compartir mods destacada
+- Sistema de recordatorio de renovación mencionado
+- Monetización clara con beneficios diferenciados
+- Estrategia de comunidad (Discord) integrada en el flujo
+
+### 🎨 Diseño
+- Uso de gradientes `from-primary/5 to-accent/5` para destacar premium
+- Animación `animate-pulse-slow` en icono Crown
+- Cards con bordes `border-primary/50` para premium
+- Alert boxes con `bg-accent/10` para información importante
+- Espaciado y jerarquía visual optimizada
+
+---
+
 ## [1.2.0] - 2025-10-20
 
 ### 🔧 Cambiado
@@ -250,6 +336,7 @@ Este proyecto sigue [SemVer](https://semver.org/):
 
 ---
 
+**[1.3.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.3.0
 **[1.2.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.2.0
 **[1.1.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.1.0
 **[1.0.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.0.0
