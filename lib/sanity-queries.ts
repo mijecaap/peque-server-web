@@ -122,7 +122,7 @@ export const newsByCategoryQuery = groq`
 
 /**
  * Query para obtener todas las galerías ordenadas por fecha de creación
- * Incluye el contador de imágenes
+ * Incluye todas las imágenes con su metadata completa
  */
 export const galleryQuery = groq`
   *[_type == "gallery"] | order(createdAt desc) {
@@ -130,13 +130,15 @@ export const galleryQuery = groq`
     _type,
     title,
     description,
-    "imageCount": count(images),
-    "coverImage": images[0] {
+    images[] {
       asset->{
         _id,
         url
       },
-      alt
+      alt,
+      caption,
+      hotspot,
+      crop
     },
     category,
     createdAt,

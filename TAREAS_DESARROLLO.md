@@ -342,15 +342,15 @@
 - [x] Aplicar estilos de artículo (typography mejorada)
 - [x] Configurar metadata dinámica para SEO
 
-### Tarea 2.13: Crear página de Galería
-- [ ] Crear archivo `app/(marketing)/gallery/page.tsx`
-- [ ] Fetch datos de galería desde Sanity
-- [ ] Implementar grid de imágenes responsive
-- [ ] Usar next/image para todas las imágenes
-- [ ] Añadir lightbox/modal para ver imágenes en grande (puedes usar react-photo-view)
-- [ ] Instalar: `npm install react-photo-view`
-- [ ] Implementar filtros por categoría si aplicable
-- [ ] Añadir animaciones stagger con Framer Motion
+### Tarea 2.13: Crear página de Galería ✅
+- [x] Crear archivo `app/(marketing)/gallery/page.tsx`
+- [x] Fetch datos de galería desde Sanity
+- [x] Implementar grid de imágenes responsive
+- [x] Usar next/image para todas las imágenes
+- [x] Añadir lightbox/modal para ver imágenes en grande (puedes usar react-photo-view)
+- [x] Instalar: `npm install react-photo-view`
+- [x] Implementar filtros por categoría si aplicable
+- [x] Añadir animaciones stagger con Framer Motion
 
 ### Tarea 2.14: Instalar y configurar Portable Text (para contenido rico)
 - [ ] Instalar: `npm install @portabletext/react`
