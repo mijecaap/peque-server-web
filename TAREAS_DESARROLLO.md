@@ -248,21 +248,21 @@
 - [x] Añadir schemas al array de schemas en la configuración
 - [x] Verificar que no hay errores de compilación
 
-### Tarea 2.6: Iniciar Sanity Studio y crear contenido de prueba
-- [ ] Ejecutar `npm run dev` en la carpeta sanity/
-- [ ] Abrir http://localhost:3333 (o puerto indicado)
-- [ ] Crear 3 noticias de prueba con:
+### Tarea 2.6: Iniciar Sanity Studio y crear contenido de prueba ✅
+- [x] Ejecutar `npm run dev` en la carpeta sanity/
+- [x] Abrir http://localhost:3333 (o puerto indicado)
+- [x] Crear 3 noticias de prueba con:
   - Títulos variados
   - Imágenes (puedes usar placeholders)
   - Contenido en el body
   - Diferentes categorías
-- [ ] Crear 1 galería de prueba con al menos 5 imágenes
-- [ ] Publicar todo el contenido
+- [x] Crear 1 galería de prueba con al menos 5 imágenes
+- [x] Publicar todo el contenido
 
-### Tarea 2.7: Crear cliente de Sanity en Next.js
-- [ ] Crear archivo `lib/sanity.ts`
-- [ ] Importar createClient de @sanity/client
-- [ ] Crear cliente con configuración:
+### Tarea 2.7: Crear cliente de Sanity en Next.js ✅
+- [x] Crear archivo `lib/sanity.ts`
+- [x] Importar createClient de @sanity/client
+- [x] Crear cliente con configuración:
   ```typescript
   const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -271,8 +271,8 @@
     useCdn: true
   })
   ```
-- [ ] Exportar el cliente
-- [ ] Crear función helper para imageUrlBuilder
+- [x] Exportar el cliente
+- [x] Crear función helper para imageUrlBuilder
 
 ### Tarea 2.8: Crear tipos TypeScript para Sanity
 - [ ] Crear archivo `types/sanity.ts`
