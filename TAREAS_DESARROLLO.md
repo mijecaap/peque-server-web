@@ -95,19 +95,19 @@
 - [x] Añadir manejo de errores con try-catch en cada función
 - [x] Exportar todas las funciones
 
-### Tarea 1.4: Crear API Routes en Next.js (Proxy)
-- [ ] Crear archivo `app/api/exaroton/servers/route.ts`
-- [ ] Implementar función GET que:
+### Tarea 1.4: Crear API Routes en Next.js (Proxy) ✅
+- [x] Crear archivo `app/api/exaroton/servers/route.ts`
+- [x] Implementar función GET que:
   - Llame a `getServers()` del cliente
   - Retorne JSON con los datos
   - Maneje errores con status 500
   - Use `export async function GET()`
-- [ ] Crear archivo `app/api/exaroton/servers/[id]/route.ts`
-- [ ] Implementar función GET que:
+- [x] Crear archivo `app/api/exaroton/servers/[id]/route.ts`
+- [x] Implementar función GET que:
   - Reciba el ID desde params
   - Llame a `getServer(id)`
   - Retorne JSON con los datos del servidor específico
-- [ ] Probar endpoints en navegador o Postman
+- [x] Probar endpoints en navegador o Postman
 
 ### Tarea 1.5: Crear Layout principal de la aplicación
 - [ ] Editar archivo `app/layout.tsx`
