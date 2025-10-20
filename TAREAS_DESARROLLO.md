@@ -394,17 +394,17 @@
 - [x] Implementar animaciones hover con Framer Motion
 - [x] Hacer responsive
 
-### Tarea 3.2: Crear componente StatusBadge
-- [ ] Crear archivo `components/StatusBadge.tsx`
-- [ ] Aceptar props: `status: 'online' | 'offline' | 'starting' | 'stopping'`
-- [ ] Usar Badge de shadcn/ui
-- [ ] Aplicar colores según status:
+### Tarea 3.2: Crear componente StatusBadge ✅
+- [x] Crear archivo `components/StatusBadge.tsx`
+- [x] Aceptar props: `status: 'online' | 'offline' | 'starting' | 'stopping'`
+- [x] Usar Badge de shadcn/ui
+- [x] Aplicar colores según status:
   - online: verde
   - offline: rojo
   - starting: amarillo
   - stopping: naranja
-- [ ] Añadir icono (círculo pulsante si está online)
-- [ ] Exportar componente
+- [x] Añadir icono (círculo pulsante si está online)
+- [x] Exportar componente
 
 ### Tarea 3.3: Crear componente PlayerCount
 - [ ] Crear archivo `components/PlayerCount.tsx`
