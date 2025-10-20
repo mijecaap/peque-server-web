@@ -5,6 +5,64 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
+## [1.2.0] - 2025-10-20
+
+### 🔧 Cambiado
+
+#### Navegación
+- **Rutas de Noticias y Galería deshabilitadas temporalmente**:
+  - Archivos renombrados a `.disabled` para evitar que se generen rutas:
+    - `app/(marketing)/news/page.tsx` → `page.tsx.disabled`
+    - `app/(marketing)/news/[slug]/page.tsx` → `page.tsx.disabled`
+    - `app/(marketing)/gallery/page.tsx` → `page.tsx.disabled`
+  - Links de navegación comentados en el Header
+  - Las funcionalidades de Sanity CMS permanecen configuradas para uso futuro
+  - Reducción del tamaño del bundle al no compilar estas páginas
+
+### 📝 Notas
+- Las páginas de noticias y galería están listas para ser reactivadas cuando sea necesario
+- Solo requiere renombrar los archivos `.disabled` de vuelta a `.tsx` y descomentar las rutas en el Header
+- Toda la infraestructura de Sanity CMS permanece funcional
+
+---
+
+## [1.1.0] - 2025-10-20
+
+### ✨ Agregado
+
+#### Formateo de MOTD de Minecraft
+- **Integración de `@sfirew/minecraft-motd-parser`**: Librería para parsear y renderizar códigos de formato de Minecraft
+- **Componente `MinecraftMOTD`**:
+  - Convierte códigos de color de Minecraft (§a, §b, §c, etc.) a HTML estilizado
+  - Soporta todos los formatos: negrita (§l), cursiva (§o), subrayado (§n), tachado (§m)
+  - Soporta códigos hex de Minecraft 1.16+
+  - Estilo de consola auténtico de Minecraft:
+    - Fondo negro (#000000) como en el juego
+    - Fuente monoespaciada (font-mono)
+    - Text shadow para efecto de profundidad
+    - Colores fieles a los originales de Minecraft
+  - Manejo de errores con fallback que limpia códigos si falla el parser
+  - Optimizado con `useMemo` para evitar re-renders innecesarios
+
+#### Mejoras en ServerCard
+- El MOTD ahora se muestra con colores y formatos de Minecraft
+- Experiencia visual más auténtica y fiel al juego
+- Mejor legibilidad del mensaje del servidor
+
+#### Ejemplos y Testing
+- Página de test (`/test-theme`) actualizada con ejemplos de MOTD:
+  - Colores básicos
+  - Formatos (negrita, cursiva, subrayado, tachado)
+  - MOTD de servidores reales (estilo Hypixel)
+  - Soporte para múltiples líneas
+
+### 📦 Dependencias
+
+#### Agregadas
+- `@sfirew/minecraft-motd-parser@1.1.6` - Parser de MOTD de Minecraft con soporte completo de códigos de color y formato
+
+---
+
 ## [1.0.0] - 2025-10-20
 
 ### 🎉 Lanzamiento Inicial
@@ -192,5 +250,6 @@ Este proyecto sigue [SemVer](https://semver.org/):
 
 ---
 
+**[1.2.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.2.0
 **[1.1.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.1.0
 **[1.0.0]**: https://github.com/mijecaap/peque-server-web/releases/tag/v1.0.0
