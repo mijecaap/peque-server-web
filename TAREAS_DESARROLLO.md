@@ -202,21 +202,21 @@
 - [x] Añadir Project ID a `.env.local` como `NEXT_PUBLIC_SANITY_PROJECT_ID`
 - [x] Añadir Dataset a `.env.local` como `NEXT_PUBLIC_SANITY_DATASET=production`
 
-### Tarea 2.2: Configurar CORS en Sanity
-- [ ] Ir a https://www.sanity.io/manage
-- [ ] Seleccionar el proyecto creado
-- [ ] Ir a Settings > API
-- [ ] Añadir origen permitido: `http://localhost:3000`
-- [ ] Añadir origen permitido: tu dominio de producción cuando lo tengas
-- [ ] Guardar cambios
+### Tarea 2.2: Configurar CORS en Sanity ✅
+- [x] Ir a https://www.sanity.io/manage
+- [x] Seleccionar el proyecto creado
+- [x] Ir a Settings > API
+- [x] Añadir origen permitido: `http://localhost:3000`
+- [x] Añadir origen permitido: tu dominio de producción cuando lo tengas
+- [x] Guardar cambios
 
-### Tarea 2.3: Crear schema de Noticias en Sanity
-- [ ] Crear archivo `sanity/schemas/news.ts`
-- [ ] Definir schema con campos:
+### Tarea 2.3: Crear schema de Noticias en Sanity ✅
+- [x] Crear archivo `sanity/schemas/news.ts`
+- [x] Definir schema con campos:
   - `name: 'news'`
   - `title: 'Noticias'`
   - `type: 'document'`
-- [ ] Añadir fields:
+- [x] Añadir fields:
   - `title` (string, required)
   - `slug` (slug, source: title, required)
   - `mainImage` (image)
@@ -225,8 +225,8 @@
   - `author` (string)
   - `excerpt` (text, descripción breve)
   - `body` (array de blockContent)
-- [ ] Configurar preview con title y media
-- [ ] Exportar el schema
+- [x] Configurar preview con title y media
+- [x] Exportar el schema
 
 ### Tarea 2.4: Crear schema de Galería en Sanity
 - [ ] Crear archivo `sanity/schemas/gallery.ts`
