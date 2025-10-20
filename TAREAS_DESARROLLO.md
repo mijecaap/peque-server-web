@@ -289,20 +289,20 @@
 - [x] Definir interface `GalleryItem`
 - [x] Exportar interfaces
 
-### Tarea 2.9: Crear queries GROQ para Sanity
-- [ ] Crear archivo `lib/sanity-queries.ts`
-- [ ] Crear query para obtener todas las noticias ordenadas por fecha:
+### Tarea 2.9: Crear queries GROQ para Sanity ✅
+- [x] Crear archivo `lib/sanity-queries.ts`
+- [x] Crear query para obtener todas las noticias ordenadas por fecha:
   ```typescript
   export const newsQuery = `*[_type == "news"] | order(publishedAt desc) {
     _id, title, slug, mainImage, category, publishedAt, author, excerpt
   }`
   ```
-- [ ] Crear query para obtener una noticia por slug:
+- [x] Crear query para obtener una noticia por slug:
   ```typescript
   export const newsBySlugQuery = `*[_type == "news" && slug.current == $slug][0]`
   ```
-- [ ] Crear query para la galería
-- [ ] Exportar todas las queries
+- [x] Crear query para la galería
+- [x] Exportar todas las queries
 
 ### Tarea 2.10: Crear página de lista de Noticias
 - [ ] Crear archivo `app/(marketing)/news/page.tsx`
