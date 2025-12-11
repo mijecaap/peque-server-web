@@ -12,13 +12,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import {
-  Monitor,
   Gamepad2,
   Check,
   Crown,
   Users,
-  Zap,
-  Shield,
   DollarSign,
   MessageCircle,
   ExternalLink,
@@ -26,7 +23,7 @@ import {
   CreditCard,
   Sparkles,
 } from "lucide-react"
-import { fadeIn, slideUp, staggerContainer, staggerItem, scaleIn } from "@/lib/animations"
+import { fadeIn, slideUp, staggerContainer, scaleIn } from "@/lib/animations"
 
 export default function ComoEntrarPage() {
 
@@ -289,7 +286,7 @@ export default function ComoEntrarPage() {
                         </div>
                         <div>
                           <p className="font-medium">Ve a Multijugador → Añadir servidor</p>
-                          <p className="text-sm text-muted-foreground">En Java: "Multijugador" | En Bedrock: "Servidores" → "Añadir servidor"</p>
+                          <p className="text-sm text-muted-foreground">En Java: &quot;Multijugador&quot; | En Bedrock: &quot;Servidores&quot; → &quot;Añadir servidor&quot;</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">

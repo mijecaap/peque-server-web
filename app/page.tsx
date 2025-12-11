@@ -9,7 +9,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import {
   Globe,
   Users,
-  Zap,
   Server,
   Shield,
   Crown,
