@@ -22,8 +22,9 @@ import {
   DollarSign,
   MessageCircle,
   ExternalLink,
-  AlertCircle,
   Server,
+  CreditCard,
+  Sparkles,
 } from "lucide-react"
 import { fadeIn, slideUp, staggerContainer, staggerItem, scaleIn } from "@/lib/animations"
 
@@ -63,160 +64,8 @@ export default function ComoEntrarPage() {
         </div>
       </section>
 
-      {/* Access Types Comparison */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="max-w-6xl mx-auto space-y-12"
-          >
-            <motion.div variants={fadeIn} className="text-center space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold">
-                Elige Tu Modalidad de Acceso
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Ofrecemos dos tipos de servidores para diferentes experiencias de juego
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Premium Card */}
-              <motion.div variants={scaleIn}>
-                <Card className="h-full border-primary/50 bg-gradient-to-br from-primary/5 to-accent/5 relative overflow-hidden">
-                  <div className="absolute top-4 right-4">
-                    <Crown className="w-8 h-8 text-primary animate-pulse-slow" />
-                  </div>
-                  <CardHeader className="space-y-4">
-                    <div>
-                      <CardTitle className="text-2xl mb-2 flex items-center gap-2">
-                        <Crown className="w-6 h-6 text-primary" />
-                        Servidores Premium
-                      </CardTitle>
-                      <CardDescription className="text-base">
-                        Mundos exclusivos con mejor rendimiento, más contenido y mods únicos
-                      </CardDescription>
-                    </div>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold">${SERVER_CONFIG.premiumPrice}</span>
-                      <span className="text-muted-foreground">/mes</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span>Acceso a todos los servidores premium (7+ servidores)</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span>Pack exclusivo de mods personalizados</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span>Mejor rendimiento y estabilidad</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span>Modo Survival exclusivo</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span>Lista blanca (whitelist) para mejor comunidad</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span>Soporte prioritario</span>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t">
-                      <Button className="w-full" asChild>
-                        <a href="/servers">
-                          <Server className="w-4 h-4 mr-2" />
-                          Ver Servidores Premium
-                          <ExternalLink className="w-4 h-4 ml-2" />
-                        </a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Free/Anarchic Card */}
-              <motion.div variants={scaleIn}>
-                <Card className="h-full">
-                  <CardHeader className="space-y-4">
-                    <div>
-                      <CardTitle className="text-2xl mb-2 flex items-center gap-2">
-                        <Users className="w-6 h-6 text-accent" />
-                        Servidor Gratuito (Anárquico)
-                      </CardTitle>
-                      <CardDescription className="text-base">
-                        Experiencia libre sin reglas para explorar y sobrevivir
-                      </CardDescription>
-                    </div>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold">Gratis</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <span>Acceso completamente gratuito</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <span>Modo anárquico sin restricciones</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <span>Ideal para comenzar y probar</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <span>Únete a la comunidad en Discord</span>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t">
-                      <div className="p-4 bg-accent/10 rounded-lg border border-accent/20 space-y-3">
-                        <div className="flex items-start gap-2">
-                          <AlertCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                          <div>
-                            <p className="font-medium mb-1">IP en Discord</p>
-                            <p className="text-sm text-muted-foreground">
-                              La IP del servidor gratuito se revela únicamente al unirte a
-                              nuestro Discord oficial
-                            </p>
-                          </div>
-                        </div>
-                        <Button className="w-full" variant="outline" asChild>
-                          <a
-                            href={SOCIAL_LINKS.discord}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <MessageCircle className="w-4 h-4 mr-2" />
-                            Unirse a Discord
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                          </a>
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Premium Access Steps */}
-      <section className="py-16 md:py-24">
+      {/* Premium Access Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-purple-500/5 to-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -226,173 +75,145 @@ export default function ComoEntrarPage() {
             className="max-w-4xl mx-auto space-y-12"
           >
             <motion.div variants={fadeIn} className="text-center space-y-4">
-              <Badge variant="outline" className="mb-2">
+              <Badge className="mb-2 bg-purple-500 hover:bg-purple-600">
                 <Crown className="w-4 h-4 mr-2" />
-                Premium
+                Servidores Premium
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold">
-                ¿Cómo Acceder a los Servidores Premium?
+                👑 Acceso Premium - ${SERVER_CONFIG.premiumPrice}/mes
               </h2>
               <p className="text-lg text-muted-foreground">
-                Sigue estos sencillos pasos para unirte a la experiencia premium
+                Desbloquea +15 servidores con mods exclusivos y rendimiento increíble
               </p>
             </motion.div>
 
-            <motion.div variants={staggerContainer} className="space-y-6">
-              {/* Step 1 */}
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                        <span className="text-xl font-bold text-primary">1</span>
+            <motion.div variants={scaleIn}>
+              <Card className="border-purple-500/50 glass-card-premium">
+                <CardHeader>
+                  <CardTitle className="text-xl flex items-center gap-2">
+                    <CreditCard className="w-5 h-5 text-purple-400" />
+                    Cómo Obtener Acceso Premium
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {/* PayPal destacado */}
+                  <div className="p-6 bg-purple-500/10 rounded-xl border-2 border-purple-500/40 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/20 rounded-full -translate-y-10 translate-x-10" />
+                    <div className="relative space-y-4">
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-6 h-6 text-purple-400" />
+                        <span className="text-lg font-bold">Paso 1: Realiza el Pago</span>
                       </div>
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">Contacta al Administrador</CardTitle>
-                        <CardDescription className="text-base">
-                          Envía un mensaje directo a <strong>{CONTACT_INFO.adminDiscord}</strong> en
-                          Discord indicando tu interés en unirte al servidor premium
-                        </CardDescription>
+                      <p className="text-muted-foreground">
+                        Paga <strong className="text-purple-400">${SERVER_CONFIG.premiumPrice} USD al mes</strong> mediante PayPal:
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button 
+                          asChild 
+                          size="lg" 
+                          className="bg-purple-500 hover:bg-purple-600 shadow-lg shadow-purple-500/25"
+                        >
+                          <a
+                            href={EXTERNAL_LINKS.paypal}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Sparkles className="w-4 h-4 mr-2" />
+                            Pagar con PayPal - ${SERVER_CONFIG.premiumPrice} USD
+                            <ExternalLink className="w-4 h-4 ml-2" />
+                          </a>
+                        </Button>
                       </div>
+                      <p className="text-sm text-muted-foreground">
+                        Link: <a href={EXTERNAL_LINKS.paypal} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline font-mono">paypal.me/WednerV</a>
+                      </p>
                     </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
+                  </div>
 
-              {/* Step 2 */}
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                        <span className="text-xl font-bold text-primary">2</span>
+                  {/* Otros métodos */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg font-semibold">Otros métodos de pago:</span>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="p-4 bg-muted/50 rounded-lg">
+                        <p className="font-medium mb-1">{CONTACT_INFO.adminCountry}</p>
+                        <p className="text-sm text-muted-foreground">
+                          SINPE, transferencia bancaria o efectivo
+                        </p>
                       </div>
-                      <div className="flex-1 space-y-4">
-                        <div>
-                          <CardTitle className="mb-2">Realiza el Pago</CardTitle>
-                          <CardDescription className="text-base mb-4">
-                            El costo es de <strong>${SERVER_CONFIG.premiumPrice} {SERVER_CONFIG.priceCurrency} por mes</strong>. Métodos de pago
-                            disponibles:
-                          </CardDescription>
-                        </div>
-                        
-                        <div className="space-y-3 pl-4">
-                          <div className="flex items-start gap-3">
-                            <DollarSign className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-medium mb-1">PayPal (Internacional)</p>
-                              <a
-                                href={EXTERNAL_LINKS.paypal}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm text-primary hover:underline inline-flex items-center gap-1"
-                              >
-                                paypal.me/WednerV
-                                <ExternalLink className="w-3 h-3" />
-                              </a>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start gap-3">
-                            <DollarSign className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-medium mb-1">{CONTACT_INFO.adminCountry}</p>
-                              <p className="text-sm text-muted-foreground">
-                                SINPE, transferencia bancaria o efectivo (en persona)
-                              </p>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start gap-3">
-                            <DollarSign className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                            <div>
-                              <p className="font-medium mb-1">Otros intercambios</p>
-                              <p className="text-sm text-muted-foreground">
-                                Se pueden aceptar otros tipos de intercambio (consultar)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
+                      <div className="p-4 bg-muted/50 rounded-lg">
+                        <p className="font-medium mb-1">Otros intercambios</p>
+                        <p className="text-sm text-muted-foreground">
+                          Se pueden aceptar otros tipos (consultar)
+                        </p>
                       </div>
                     </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
+                  </div>
 
-              {/* Step 3 */}
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                        <span className="text-xl font-bold text-primary">3</span>
-                      </div>
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">
-                          Activación de Lista Blanca
-                        </CardTitle>
-                        <CardDescription className="text-base">
-                          Una vez confirmado el pago, serás añadido a la lista blanca
-                          (whitelist) del servidor, lo que te dará acceso inmediato
-                        </CardDescription>
-                      </div>
+                  {/* Paso 2 */}
+                  <div className="p-4 bg-muted/30 rounded-lg space-y-3">
+                    <div className="flex items-center gap-2">
+                      <MessageCircle className="w-5 h-5 text-primary" />
+                      <span className="font-semibold">Paso 2: Contacta al Admin</span>
                     </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
+                    <p className="text-sm text-muted-foreground">
+                      Envía un mensaje a <strong>{CONTACT_INFO.adminDiscord}</strong> en Discord indicando que realizaste el pago.
+                      Te añadirán a la whitelist y recibirás el pack de mods.
+                    </p>
+                  </div>
 
-              {/* Step 4 */}
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                        <span className="text-xl font-bold text-primary">4</span>
+                  {/* Características */}
+                  <div className="space-y-2 pt-4 border-t">
+                    <p className="font-semibold mb-3">✨ Lo que obtienes:</p>
+                    <div className="grid sm:grid-cols-2 gap-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-purple-400" />
+                        <span>Acceso a +15 servidores premium</span>
                       </div>
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">Recibe el Pack de Mods</CardTitle>
-                        <CardDescription className="text-base">
-                          Recibirás el pack de mods exclusivos junto con las instrucciones
-                          de instalación para que puedas disfrutar de todos los beneficios
-                        </CardDescription>
+                      <div className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-purple-400" />
+                        <span>Hasta 16GB RAM y 16 cores</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-purple-400" />
+                        <span>+1000 mods exclusivos</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-purple-400" />
+                        <span>Backups automáticos</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-purple-400" />
+                        <span>Soporte premium prioritario</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-purple-400" />
+                        <span>Rol admin en servidores</span>
                       </div>
                     </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-            </motion.div>
+                  </div>
 
-            <motion.div variants={fadeIn}>
-              <Card className="border-primary/30 bg-primary/5">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-3">
-                    <Shield className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                    <div className="space-y-2">
-                      <p className="font-medium text-lg">Notas Importantes:</p>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary">•</span>
-                          <span>
-                            Un solo pago te da acceso a todos los servidores premium durante
-                            {SERVER_CONFIG.subscriptionDays} días
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary">•</span>
-                          <span>
-                            Por favor, no compartas los mods con otros jugadores que no sean
-                            premium
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary">•</span>
-                          <span>
-                            El acceso se renueva cada mes. Recibirás un recordatorio antes
-                            del vencimiento
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
+                  {/* Botones */}
+                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                    <Button asChild className="bg-purple-500 hover:bg-purple-600" size="lg">
+                      <a href={EXTERNAL_LINKS.paypal} target="_blank" rel="noopener noreferrer">
+                        <CreditCard className="w-4 h-4 mr-2" />
+                        Pagar con PayPal
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="border-purple-500/50" size="lg">
+                      <a href="/servers">
+                        <Server className="w-4 h-4 mr-2" />
+                        Ver Servidores Premium
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" size="lg">
+                      <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer">
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        Discord
+                      </a>
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -401,7 +222,7 @@ export default function ComoEntrarPage() {
         </div>
       </section>
 
-      {/* General Steps (How to Join) */}
+      {/* Free Server Section */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -412,101 +233,127 @@ export default function ComoEntrarPage() {
             className="max-w-4xl mx-auto space-y-12"
           >
             <motion.div variants={fadeIn} className="text-center space-y-4">
+              <Badge variant="secondary" className="mb-2">
+                <Users className="w-4 h-4 mr-2" />
+                Servidor Gratuito
+              </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold">
-                Pasos Generales para Unirte
+                🎮 Servidor Gratuito - ¡Sin costo!
               </h2>
               <p className="text-lg text-muted-foreground">
-                Una vez tengas la IP, sigue estas instrucciones para conectarte
+                Juega gratis con toda la comunidad. Compatible con Java y Bedrock.
               </p>
             </motion.div>
 
-            <motion.div variants={staggerContainer} className="space-y-6">
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <Monitor className="w-8 h-8 text-primary shrink-0" />
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">
-                          1. Asegúrate de tener Minecraft
-                        </CardTitle>
-                        <CardDescription className="text-base space-y-2">
-                          <p>
-                            Necesitas <strong>Minecraft Java Edition</strong> o{" "}
-                            <strong>Minecraft Bedrock para PC</strong>
-                          </p>
-                          <p className="text-destructive font-medium">
-                            ⚠️ No se permite el acceso desde consolas (PlayStation, Xbox,
-                            Switch)
-                          </p>
-                        </CardDescription>
-                      </div>
+            <motion.div variants={scaleIn}>
+              <Card className="glass-card">
+                <CardHeader>
+                  <CardTitle className="text-xl flex items-center gap-2">
+                    <Gamepad2 className="w-5 h-5 text-accent" />
+                    Datos de Conexión
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {/* IP y Puerto destacados */}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="p-6 bg-accent/10 rounded-xl border-2 border-accent/30 text-center">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">IP del Servidor</p>
+                      <p className="text-xl font-bold text-accent font-mono bg-background/50 px-4 py-3 rounded-lg">
+                        Peque_Server21.aternos.me
+                      </p>
                     </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
+                    <div className="p-6 bg-accent/10 rounded-xl border-2 border-accent/30 text-center">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Puerto (Solo Bedrock)</p>
+                      <p className="text-xl font-bold text-accent font-mono bg-background/50 px-4 py-3 rounded-lg">
+                        34538
+                      </p>
+                    </div>
+                  </div>
 
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <Gamepad2 className="w-8 h-8 text-primary shrink-0" />
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">
-                          2. Abre Minecraft y ve a Multijugador
-                        </CardTitle>
-                        <CardDescription className="text-base">
-                          <ol className="list-decimal list-inside space-y-2 mt-2">
-                            <li>Inicia Minecraft en tu PC</li>
-                            <li>Selecciona &quot;Multijugador&quot; en el menú principal</li>
-                            <li>Haz clic en &quot;Añadir servidor&quot;</li>
-                          </ol>
-                        </CardDescription>
+                  {/* Cómo unirse */}
+                  <div className="space-y-4">
+                    <h3 className="font-semibold text-lg">📋 Cómo unirse:</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                          <span className="font-bold text-accent">1</span>
+                        </div>
+                        <div>
+                          <p className="font-medium">Abre Minecraft Java o Bedrock</p>
+                          <p className="text-sm text-muted-foreground">Asegúrate de tener la versión para PC</p>
+                        </div>
                       </div>
-                    </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <Zap className="w-8 h-8 text-primary shrink-0" />
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">
-                          3. Añade la IP del servidor
-                        </CardTitle>
-                        <CardDescription className="text-base space-y-2">
-                          <p>
-                            Ingresa la IP correspondiente (Premium o Gratuita) en el campo
-                            &quot;Dirección del servidor&quot;
+                      <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                          <span className="font-bold text-accent">2</span>
+                        </div>
+                        <div>
+                          <p className="font-medium">Ve a Multijugador → Añadir servidor</p>
+                          <p className="text-sm text-muted-foreground">En Java: "Multijugador" | En Bedrock: "Servidores" → "Añadir servidor"</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                          <span className="font-bold text-accent">3</span>
+                        </div>
+                        <div>
+                          <p className="font-medium">Ingresa la IP (y puerto si es Bedrock)</p>
+                          <p className="text-sm text-muted-foreground">
+                            Java: Solo la IP | Bedrock: IP + Puerto 34538
                           </p>
-                          <p>Dale un nombre al servidor (ej: &quot;PequeServer Premium&quot;)</p>
-                          <p>Haz clic en &quot;Listo&quot;</p>
-                        </CardDescription>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
+                        <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                          <span className="font-bold text-accent">4</span>
+                        </div>
+                        <div>
+                          <p className="font-medium">¡Conéctate y juega!</p>
+                          <p className="text-sm text-muted-foreground">Únete a Discord para ver si el servidor está abierto</p>
+                        </div>
                       </div>
                     </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
+                  </div>
 
-              <motion.div variants={staggerItem}>
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <Check className="w-8 h-8 text-primary shrink-0" />
-                      <div className="flex-1">
-                        <CardTitle className="mb-2">4. ¡Conéctate y juega!</CardTitle>
-                        <CardDescription className="text-base">
-                          Selecciona el servidor de la lista y haz clic en &quot;Conectarse&quot;.
-                          ¡Bienvenido a PequeServer!
-                        </CardDescription>
-                      </div>
+                  {/* Características */}
+                  <div className="grid sm:grid-cols-2 gap-2 text-sm pt-4 border-t">
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-accent" />
+                      <span>Compatible Java y Bedrock</span>
                     </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-accent" />
+                      <span>Comunidad muy activa</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-accent" />
+                      <span>Economía y protección anti-grief</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-accent" />
+                      <span>PvP, minar, construir</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-accent" />
+                      <span>Mods de armas, bosses, autos</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-accent" />
+                      <span>100% gratis</span>
+                    </div>
+                  </div>
+
+                  {/* Botón Discord */}
+                  <div className="pt-4">
+                    <Button asChild className="w-full" size="lg">
+                      <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer">
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        Unirse a Discord
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </motion.div>
         </div>
@@ -550,37 +397,13 @@ export default function ComoEntrarPage() {
                     ¿Puedo probar el servidor antes de pagar?
                   </AccordionTrigger>
                   <AccordionContent>
-                    ¡Por supuesto! Puedes unirte primero al servidor gratuito (anárquico)
-                    para conocer nuestra comunidad y ver si te gusta el ambiente. La IP
-                    del servidor gratuito está disponible en nuestro Discord.
+                    ¡Por supuesto! Puedes unirte primero al servidor gratuito para conocer 
+                    nuestra comunidad y ver si te gusta el ambiente. La IP está arriba en 
+                    esta misma página.
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-3">
-                  <AccordionTrigger className="text-left">
-                    ¿Hay reglas en los servidores?
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    El servidor gratuito es anárquico, por lo que tiene reglas mínimas. Los
-                    servidores premium tienen reglas básicas de convivencia para mantener
-                    una mejor experiencia de juego. Recibirás las reglas completas al
-                    unirte.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-4">
-                  <AccordionTrigger className="text-left">
-                    ¿Qué pasa si tengo problemas técnicos?
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    Nuestro equipo de soporte está disponible en Discord. Los usuarios
-                    premium tienen soporte prioritario, pero ayudamos a todos los
-                    miembros de la comunidad. Puedes crear un ticket en Discord o escribir
-                    en el canal de soporte.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5">
                   <AccordionTrigger className="text-left">
                     ¿Puedo jugar desde consola?
                   </AccordionTrigger>
@@ -592,7 +415,7 @@ export default function ComoEntrarPage() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-6">
+                <AccordionItem value="item-4">
                   <AccordionTrigger className="text-left">
                     ¿El pago premium es recurrente?
                   </AccordionTrigger>
@@ -603,15 +426,14 @@ export default function ComoEntrarPage() {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-7">
+                <AccordionItem value="item-5">
                   <AccordionTrigger className="text-left">
-                    ¿Puedo compartir los mods con amigos?
+                    ¿Qué pasa si tengo problemas técnicos?
                   </AccordionTrigger>
                   <AccordionContent>
-                    Por favor, no compartas los mods exclusivos con jugadores que no sean
-                    premium. Esto nos ayuda a mantener la calidad del servicio y continuar
-                    desarrollando contenido único. Si tus amigos quieren unirse, pueden
-                    hacer su propio pago para obtener acceso.
+                    Nuestro equipo de soporte está disponible en Discord. Los usuarios
+                    premium tienen soporte prioritario, pero ayudamos a todos los
+                    miembros de la comunidad.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -630,14 +452,13 @@ export default function ComoEntrarPage() {
             variants={scaleIn}
             className="max-w-3xl mx-auto"
           >
-            <Card className="border-primary/50 bg-gradient-to-br from-primary/10 to-accent/10">
+            <Card className="border-primary/50 bg-gradient-to-br from-primary/10 to-accent/10 glass-card">
               <CardHeader className="text-center space-y-4 pb-6">
                 <CardTitle className="text-3xl sm:text-4xl font-bold">
                   ¿Listo para Empezar?
                 </CardTitle>
                 <CardDescription className="text-lg">
-                  Únete a nuestra comunidad y comienza tu aventura en PequeServer hoy
-                  mismo
+                  Únete a nuestra comunidad y comienza tu aventura hoy mismo
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 pb-8">
@@ -652,10 +473,10 @@ export default function ComoEntrarPage() {
                       Unirse a Discord
                     </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="w-full" asChild>
-                    <a href="/servers">
-                      <Gamepad2 className="w-5 h-5 mr-2" />
-                      Ver Servidores
+                  <Button size="lg" variant="outline" className="w-full bg-purple-500/10 border-purple-500/50 hover:bg-purple-500/20" asChild>
+                    <a href={EXTERNAL_LINKS.paypal} target="_blank" rel="noopener noreferrer">
+                      <Crown className="w-5 h-5 mr-2" />
+                      Acceso Premium
                     </a>
                   </Button>
                 </div>

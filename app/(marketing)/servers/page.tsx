@@ -8,8 +8,9 @@ import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
-import { RefreshCw, Search, Server, AlertCircle } from 'lucide-react'
+import { RefreshCw, Search, Server, AlertCircle, Crown, MessageCircle, Info } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { SOCIAL_LINKS } from '@/lib/constants'
 
 type FilterType = 'all' | 'online' | 'offline'
 
@@ -71,13 +72,39 @@ export default function ServersPage() {
     <div className="container mx-auto px-4 py-12">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          Servidores
-        </h1>
+        <div className="flex items-center gap-3 mb-4">
+          <Crown className="w-8 h-8 text-purple-400" />
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-primary to-purple-500 bg-clip-text text-transparent">
+            Servidores Premium
+          </h1>
+        </div>
         <p className="text-lg text-muted-foreground max-w-2xl">
-          Estado en tiempo real de nuestros servidores de Minecraft
+          Estado en tiempo real de nuestros servidores premium de Minecraft
         </p>
       </div>
+
+      {/* Notice Card */}
+      <Card className="mb-8 border-purple-500/30 bg-purple-500/5">
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-3">
+            <Info className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+            <div className="space-y-2">
+              <p className="font-medium">
+                Estos son solo los servidores <span className="text-purple-400">Premium</span>
+              </p>
+              <p className="text-sm text-muted-foreground">
+                El servidor gratuito solo se puede ver en Discord. Únete para obtener la IP y ver cuándo está disponible.
+              </p>
+              <Button asChild variant="outline" size="sm" className="mt-2 border-purple-500/50">
+                <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Ver Servidor Gratuito en Discord
+                </a>
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Stats Cards */}
       {!isLoading && servers && (
@@ -86,7 +113,7 @@ export default function ServersPage() {
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-muted-foreground">Total</p>
+                  <p className="text-sm text-muted-foreground">Total Premium</p>
                   <p className="text-2xl font-bold">{totalCount}</p>
                 </div>
                 <Server className="w-8 h-8 text-muted-foreground" />

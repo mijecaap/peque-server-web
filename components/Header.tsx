@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -12,20 +13,24 @@ export function Header() {
 
   const navigation = [
     { name: "Inicio", href: "/" },
-    { name: "Servidores", href: "/servers" },
+    { name: "Servidores Premium", href: "/servers" },
     { name: "¿Cómo entrar?", href: "/como-entrar" },
-    // Temporalmente deshabilitado
-    // { name: "Noticias", href: "/news" },
-    // { name: "Galería", href: "/gallery" },
   ]
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            PequeServer
+        <Link href="/" className="flex items-center space-x-3">
+          <Image
+            src="/logo.jpg"
+            alt="El Pequeño Servidor"
+            width={40}
+            height={40}
+            className="rounded-lg"
+          />
+          <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            El Pequeño Servidor
           </span>
         </Link>
 
